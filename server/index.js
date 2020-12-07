@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 
 // IMPORT YOUR MODELS
 require('./models/Users');
+require('./models/Films');
+
 
 const app = express();
 
@@ -21,6 +23,7 @@ app.use(bodyParser.json());
 
 // IMPORT YOUR ROUTES
 require('./routes/usersRoutes')(app);
+require('./routes/filmsRoutes')(app);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
