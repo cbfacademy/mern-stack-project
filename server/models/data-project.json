@@ -1,0 +1,42 @@
+[
+    {
+        "project_id": 1,
+        "client_name": "London Lions",
+        "project_name": "project1",
+        "project_description": "This is the description of the project...",
+        "location": "London",
+        "date": "21/12/20",
+        "contact_information": "email address...",
+        "skills": ["html", "json", "javascript"]
+    },
+    {
+        "project_id": 2,
+        "client_name": "Manchester Magic",
+        "project_name": "project2",
+        "project_description": "This is the description of the project...",
+        "location": "Manchester",
+        "date": "21/12/20",
+        "contact_information": "email address...",
+        "skills": ["html", "json", "javascript"]
+    },
+    {
+        "project_id": 3,
+        "client_name": "Leicester Riders",
+        "project_name": "project 3",
+        "project_description": "This is the description of the project...",
+        "location": "Leicester",
+        "date": "21/12/20",
+        "contact_information": "email address...",
+        "skills": ["html", "json", "javascript"]
+    },
+    {
+        "project_id": 4,
+        "client_name": "Sheffield Sharks",
+        "project_name": "project4",
+        "project_description": "This is the description of the project...",
+        "location": "Sheffied",
+        "date": "21/12/20",
+        "contact_information": "email address...",
+        "skills": ["photography", "photoshop", "javascript"]
+    }
+]

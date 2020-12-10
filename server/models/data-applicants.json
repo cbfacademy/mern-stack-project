@@ -1,0 +1,20 @@
+[
+    {
+        "project_id": 1,
+        "applicant_name": "user1",
+        "date_of_application": "01/01/2020",
+        "applicant_email": "email-address"
+    },
+    {
+        "project_id": 1,
+        "applicant_name": "user2",
+        "date_of_application": "02/01/2020",
+        "applicant_email": "email-address"
+    },
+    {
+        "project_id": 1,
+        "applicant_name": "user3",
+        "date_of_application": "03/01/2020",
+        "applicant_email": "email-address"
+    }
+]
