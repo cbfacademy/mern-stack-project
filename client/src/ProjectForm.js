@@ -6,7 +6,13 @@ class ProjectForm extends React.Component {
   constructor(props) {
     super(props);
     // state allows you save values, similar to a json object
-    this.state = { ClientName: "", ProjectName: "" };
+    this.state = {
+      ClientName: "",
+      ProjectName: "",
+      ProjectDescription: "",
+      Location: "",
+      Date: "",
+    };
 
     //wire up events - handleChange used when you change something inside textbox, handleSubmit is used when you used the submit button
     this.handleChangeClientName = this.handleChangeClientName.bind(this);
@@ -17,11 +23,23 @@ class ProjectForm extends React.Component {
   // taking value in textbox and saving it in the state
   handleChangeClientName(event) {
     this.setState({ ClientName: event.target.value });
-  }
+  };
 
   handleChangeProjectName(event) {
     this.setState({ ProjectName: event.target.value });
-  }
+  };
+
+  handleChangeProjectDescription(event) {
+    this.setState({ ProjectDescription: event.target.value });
+  };
+
+  handleChangeProjectLocation(event) {
+    this.setState({ ProjectLocation: event.target.value });
+  };
+
+  handleChangeProjectDate(event) {
+    this.setState({ ProjectDate: event.target.value });
+  };
 
   //Sending post after pressing the submit button
   handleSubmit(event) {
@@ -68,6 +86,31 @@ class ProjectForm extends React.Component {
             onChange={this.handleChangeProjectName}
           />
         </label>
+        <label>
+          Project Description:
+          <input
+            type="text"
+            value={this.state.ProjectDescription}
+            onChange={this.handleChangeProjectDescription}
+          />
+        </label>
+        <label>
+          Location:
+          <input
+            type="text"
+            value={this.state.ProjectLocation}
+            onChange={this.handleChangeProjectLocation}
+          />
+        </label>
+        <label>
+          Project Date:
+          <input
+            type="text"
+            value={this.state.ProjectDate}
+            onChange={this.handleChangeProjectDate}
+          />
+        </label>
+
         <input type="submit" value="Submit" />
       </form>
     );
