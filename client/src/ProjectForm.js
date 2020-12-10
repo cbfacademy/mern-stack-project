@@ -17,36 +17,41 @@ class ProjectForm extends React.Component {
     //wire up events - handleChange used when you change something inside textbox, handleSubmit is used when you used the submit button
     this.handleChangeClientName = this.handleChangeClientName.bind(this);
     this.handleChangeProjectName = this.handleChangeProjectName.bind(this);
+    this.handleChangeProjectName = this.handleChangeProjectDescription.bind(
+      this
+    );
+    this.handleChangeProjectName = this.handleChangeLocation.bind(this);
+    this.handleChangeProjectName = this.handleChangeDate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   //Actual definitions of functions
   // taking value in textbox and saving it in the state
   handleChangeClientName(event) {
     this.setState({ ClientName: event.target.value });
-  };
+  }
 
   handleChangeProjectName(event) {
     this.setState({ ProjectName: event.target.value });
-  };
+  }
 
   handleChangeProjectDescription(event) {
     this.setState({ ProjectDescription: event.target.value });
-  };
+  }
 
-  handleChangeProjectLocation(event) {
-    this.setState({ ProjectLocation: event.target.value });
-  };
+  handleChangeLocation(event) {
+    this.setState({ Location: event.target.value });
+  }
 
-  handleChangeProjectDate(event) {
-    this.setState({ ProjectDate: event.target.value });
-  };
+  handleChangeDate(event) {
+    this.setState({ Date: event.target.value });
+  }
 
   //Sending post after pressing the submit button
   handleSubmit(event) {
     alert(
       "A profile was submitted: " +
         this.state.ClientName +
-        " " +
+        "- " +
         this.state.ProjectName
     );
 
@@ -55,9 +60,9 @@ class ProjectForm extends React.Component {
       project_id: 0,
       client_name: this.state.ClientName,
       project_name: this.state.ProjectName,
-      project_description: "",
-      location: "",
-      date: "",
+      project_description: this.state.ProjectDescription,
+      location: this.state.Location,
+      date: this.state.Date,
       contact_information: "",
       skills: ["html", "json", "javascript"],
     };
@@ -98,16 +103,16 @@ class ProjectForm extends React.Component {
           Location:
           <input
             type="text"
-            value={this.state.ProjectLocation}
-            onChange={this.handleChangeProjectLocation}
+            value={this.state.Location}
+            onChange={this.handleChangeLocation}
           />
         </label>
         <label>
           Project Date:
           <input
             type="text"
-            value={this.state.ProjectDate}
-            onChange={this.handleChangeProjectDate}
+            value={this.state.Date}
+            onChange={this.handleChangeDate}
           />
         </label>
 
