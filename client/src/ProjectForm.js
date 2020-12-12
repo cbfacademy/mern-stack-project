@@ -19,11 +19,11 @@ class ProjectForm extends React.Component {
     //wire up events - handleChange used when you change something inside textbox, handleSubmit is used when you used the submit button
     this.handleChangeClientName = this.handleChangeClientName.bind(this);
     this.handleChangeProjectName = this.handleChangeProjectName.bind(this);
-    this.handleChangeProjectName = this.handleChangeProjectDescription.bind(
+    this.handleChangeProjectDescription = this.handleChangeProjectDescription.bind(
       this
     );
-    this.handleChangeProjectName = this.handleChangeLocation.bind(this);
-    this.handleChangeProjectName = this.handleChangeDate.bind(this);
+    this.handleChangeLocation = this.handleChangeLocation.bind(this);
+    this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   //Actual definitions of functions
