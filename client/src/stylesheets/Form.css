@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Damion&family=Montserrat:wght@400;600;700;800&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.formTitle {
+  text-align: center;
+  font-size: 40px;
+  color: #ff7e67;
+}
+
+.formContainer {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.label {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  height: 20px;
+}
+
+.button {
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #07689f;
+  color: white;
+  height: 40px;
+  width: 50%;
+  /* po: center; */
+  /* padding: 10px 0; */
+}

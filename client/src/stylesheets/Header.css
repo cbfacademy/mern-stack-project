@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Damion&family=Montserrat:wght@400;600;700;800&display=swap");
+
+.headerContainer {
+  background-color: #07689f;
+  /* height: 10%; */
+  margin: 0;
+}
+
+.appTitle {
+  color: white;
+  font-family: "Damion", cursive;
+  font-size: 70px;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 15px;
+}

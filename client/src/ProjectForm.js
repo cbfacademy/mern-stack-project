@@ -1,5 +1,7 @@
 import React from "react";
 import projectService from "./services/projectService";
+import "../src/stylesheets/Form.css";
+import Header from "../src/components/Header";
 
 //Declaring a react component
 class ProjectForm extends React.Component {
@@ -74,54 +76,58 @@ class ProjectForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Client Name:
-          <input
-            type="text"
-            value={this.state.ClientName}
-            onChange={this.handleChangeClientName}
-          />
-        </label>
-        <label>
-          Project Name:
-          <input
-            type="text"
-            value={this.state.ProjectName}
-            onChange={this.handleChangeProjectName}
-          />
-        </label>
-        <label>
-          Project Description:
-          <input
-            type="text"
-            value={this.state.ProjectDescription}
-            onChange={this.handleChangeProjectDescription}
-          />
-        </label>
-        <label>
-          Location:
-          <input
-            type="text"
-            value={this.state.Location}
-            onChange={this.handleChangeLocation}
-          />
-        </label>
-        <label>
-          Project Date:
-          <input
-            type="text"
-            value={this.state.Date}
-            onChange={this.handleChangeDate}
-          />
-        </label>
+      <>
+        <React.Fragment>
+          <Header />
+          <h2 className="formTitle">Project Form</h2>
+        </React.Fragment>
+        <form onSubmit={this.handleSubmit} className="formContainer">
+          <label>
+            <div className="label">Client Name:</div>
+            <input
+              type="text"
+              value={this.state.ClientName}
+              onChange={this.handleChangeClientName}
+            />
+          </label>
+          <label>
+            <div className="label">Project Name:</div>
+            <input
+              type="text"
+              value={this.state.ProjectName}
+              onChange={this.handleChangeProjectName}
+            />
+          </label>
+          <label>
+            <div className="label">Project Description:</div>
+            <input
+              type="textarea"
+              value={this.state.ProjectDescription}
+              onChange={this.handleChangeProjectDescription}
+            />
+          </label>
+          <label>
+            <div className="label">Location:</div>
+            <input
+              type="text"
+              value={this.state.Location}
+              onChange={this.handleChangeLocation}
+            />
+          </label>
+          <label>
+            <div className="label">Deadline:</div>
+            <input
+              type="text"
+              value={this.state.Date}
+              onChange={this.handleChangeDate}
+            />
+          </label>
 
-        <input type="submit" value="Submit" />
-      </form>
+          <input type="submit" value="Submit" className="button" />
+        </form>
+      </>
     );
   }
 }
 
 export default ProjectForm;
-
-//Task get it to list projects instead & create service etc

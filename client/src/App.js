@@ -1,4 +1,64 @@
 import React, { useState, useEffect } from "react";
+import Header from "../src/components/Header";
+import projectService from "./services/projectService";
+
+function App() {
+  const [projects, setprojects] = useState(null);
+
+  useEffect(() => {
+    if (!projects) {
+      getprojects();
+    }
+  });
+
+  const getprojects = async () => {
+    // copy this and three const and create versions for projects
+    let res = await projectService.getAll();
+    setprojects(res);
+  };
+
+  const createProject = async () => {
+    // copy this and three const and create versions for projects
+    // let res = await projectService.createProject();
+    await projectService.createProject();
+  };
+
+  const renderProject = (project) => {
+    return (
+      <li key={project.id}>
+        <h3>{`${project.project_name}`}</h3>
+        <h4>{`${project.client_name}`}</h4>
+        <p>{`${project.project_description}`}</p>
+      </li>
+    );
+  };
+
+  return (
+    //32-41 telling the app what to do
+    <>
+      <React.Fragment>
+        <Header />
+      </React.Fragment>
+
+      <div>
+        <ul>
+          {projects && projects.length > 0 ? (
+            projects.map((project) => renderProject(project)) // looping through project and rendering on the screen
+          ) : (
+            <p> No projects found </p>
+          )}
+        </ul>
+        <div>
+          <button onClick={createProject}>Button</button>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default App;
+
+//Task get it to list projects instead & create service etc
 
 // SERVICES - calling the api's created
 // import userService from './services/userService'; // create a projectService (copy line by line)
@@ -43,56 +103,3 @@ import React, { useState, useEffect } from "react";
 // }
 
 // export default App
-
-import projectService from "./services/projectService";
-
-function App() {
-  const [projects, setprojects] = useState(null);
-
-  useEffect(() => {
-    if (!projects) {
-      getprojects();
-    }
-  });
-
-  const getprojects = async () => {
-    // copy this and three const and create versions for projects
-    let res = await projectService.getAll();
-    setprojects(res);
-  };
-
-  const createProject = async () => {
-    // copy this and three const and create versions for projects
-    let res = await projectService.createProject();
-  };
-
-  const renderProject = (project) => {
-    return (
-      <li key={project.id}>
-        <h3>{`${project.project_name}`}</h3>
-        <h4>{`${project.client_name}`}</h4>
-        <p>{`${project.project_description}`}</p>
-      </li>
-    );
-  };
-
-  return (
-    //32-41 telling the app what to do
-    <div>
-      <ul>
-        {projects && projects.length > 0 ? (
-          projects.map((project) => renderProject(project)) // looping through project and rendering on the screen
-        ) : (
-          <p> No projects found </p>
-        )}
-      </ul>
-      <div>
-        <button onClick={createProject}>Button</button>
-      </div>
-    </div>
-  );
-}
-
-export default App;
-
-//Task get it to list projects instead & create service etc
