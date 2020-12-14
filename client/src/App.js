@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Header from "../src/components/Header";
+// import Header from "../src/components/Header";
 import projectService from "./services/projectService";
 import About from "./pages/About";
 
@@ -44,7 +44,7 @@ function App() {
           path="/"
           render={() => (
             <React.Fragment>
-              <Header />
+              {/* <Header /> */}
             </React.Fragment>
           )}
         />
@@ -53,7 +53,7 @@ function App() {
           path="/about"
           render={() => (
             <React.Fragment>
-              <Header />
+              {/* <Header /> */}
               <About />
             </React.Fragment>
           )}
