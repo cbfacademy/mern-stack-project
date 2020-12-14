@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // import Header from "../src/components/Header";
 import projectService from "./services/projectService";
 import About from "./pages/About";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [projects, setprojects] = useState(null);
@@ -44,7 +45,7 @@ function App() {
           path="/"
           render={() => (
             <React.Fragment>
-              {/* <Header /> */}
+              <Navbar />
             </React.Fragment>
           )}
         />
