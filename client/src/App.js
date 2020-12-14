@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "../src/components/Header";
 import projectService from "./services/projectService";
+import About from "./pages/About";
 
 function App() {
   const [projects, setprojects] = useState(null);
@@ -36,9 +38,27 @@ function App() {
   return (
     //32-41 telling the app what to do
     <>
-      <React.Fragment>
-        <Header />
-      </React.Fragment>
+      <Router>
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <React.Fragment>
+              <Header />
+            </React.Fragment>
+          )}
+        />
+        <Route
+          exact
+          path="/about"
+          render={() => (
+            <React.Fragment>
+              <Header />
+              <About />
+            </React.Fragment>
+          )}
+        />
+      </Router>
 
       <div>
         <ul>

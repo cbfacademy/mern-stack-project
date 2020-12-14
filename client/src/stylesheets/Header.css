@@ -1,9 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Damion&family=Montserrat:wght@400;600;700;800&display=swap");
 
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
 .headerContainer {
   background-color: #07689f;
   /* height: 10%; */
   margin: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
 }
 
 .appTitle {
@@ -12,5 +21,17 @@
   font-size: 70px;
   font-weight: bold;
   margin: 0;
-  padding: 5px 15px;
+  padding: 2px 15px;
+}
+
+.navLink {
+  padding-left: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.navLink:hover {
+  color: #ff7e67;
 }
