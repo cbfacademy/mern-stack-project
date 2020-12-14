@@ -5,12 +5,12 @@
 .btn {
   padding: 8px;
   border-radius: 4px;
-  outline: none;
-  border: none;
+  border: 1px solid white;
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
   margin-right: 10px;
+  color: white;
 }
 
 .btn:hover {
