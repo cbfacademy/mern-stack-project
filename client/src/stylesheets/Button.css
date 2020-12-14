@@ -3,15 +3,18 @@
 }
 
 .btn {
-  padding: 8px 20px;
+  padding: 8px;
   border-radius: 4px;
   outline: none;
   border: none;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 10px;
 }
 
 .btn:hover {
-  padding: 8px 20px;
+  padding: 8px;
   transition: all 0.3s ease-out;
   background: #ffff;
   color: #ff7e67;
@@ -32,15 +35,15 @@
 }
 
 .btn--medium {
-  padding: 8px 20px;
+  padding: 8px 8px;
   border-radius: 4px;
   font-size: 18px;
   color: #fff;
 }
 
-.btn--large {
+/* .btn--large {
   padding: 12px 26px;
   border-radius: 4px;
-  font-size: 20px;
+  font-size: 14px;
   color: #fff;
-}
+} */

@@ -1,8 +1,8 @@
 .navbar-items {
   background: linear-gradient(
     90deg,
-    rgb(162, 213, 242) -100%,
-    rgba(7, 104, 159, 1) 100%
+    rgba(7, 104, 159, 1) 30%,
+    rgb(162, 213, 242) 60%
   );
   height: 80px;
   display: flex;
@@ -29,22 +29,24 @@
   text-align: center;
   width: 70vw;
   justify-content: end;
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
 }
 
 .nav-links {
   text-decoration: none;
-  color: white;
-  padding: 0.5rem 1rem;
+  color: rgba(7, 104, 159, 1);
+  font-weight: bold;
+  padding: 0.5rem;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
 }
 
 .nav-links:hover {
-  background-color: rgba(162, 213, 242, 1);
+  background-color: rgba(7, 104, 159, 1);
   border-radius: 4px;
   transition: all 0.2s ease-out;
-  color: rgba(7, 104, 159, 1);
+  color: white;
+  font-weight: bold;
 }
 
 .fa-bars {

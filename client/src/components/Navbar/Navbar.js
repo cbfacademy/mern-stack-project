@@ -3,7 +3,6 @@ import { MenuItems } from "./MenuItems";
 import "../../stylesheets/Navbar.css";
 import { Button } from "../Button";
 
-
 class Navbar extends React.Component {
   state = { clicked: false };
 
@@ -31,7 +30,7 @@ class Navbar extends React.Component {
             );
           })}
         </ul>
-        <Button>Sign Up</Button>
+        <Button>Become a Client</Button>
       </nav>
     );
   }

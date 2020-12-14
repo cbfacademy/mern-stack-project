@@ -3,7 +3,9 @@ import "../stylesheets/Button.css";
 
 const STYLES = ["btn--primary", "btn--outline"];
 
-const SIZES = ["btn--medium", "btn--large"];
+// const SIZES = ["btn--medium", "btn--large"];
+
+const SIZES = "btn--medium";
 
 export const Button = ({
   children,
@@ -19,8 +21,12 @@ export const Button = ({
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   return (
-      <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>
-          {children}
-          </button>
-  )
+    <button
+      className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+      onClick={onClick}
+      type={type}
+    >
+      {children}
+    </button>
+  );
 };
