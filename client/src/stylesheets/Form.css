@@ -27,15 +27,16 @@ input {
 }
 
 .button {
-  align-items: center;
-  margin-top: 20px;
+  margin-top: 40px;
   border-radius: 8px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   background-color: #07689f;
   color: white;
-  height: 40px;
-  width: 50%;
-  /* po: center; */
-  /* padding: 10px 0; */
+  height: 50px;
+  width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
