@@ -7,8 +7,46 @@
   font-family: "Montserrat", sans-serif;
 }
 
-ul {
+/* .projects-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+} */
+
+.projects-container {
+  margin: 20px;
   display: grid;
-  grid-template-rows: 80px;
-  grid-template-columns: 80px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: auto;
+  list-style: none;
 }
+
+.project-profile {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin: 10px;
+}
+
+/* .project-profile {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 80%;
+  border-bottom: 1px solid black;
+} */
+
+.project-name {
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: #07689f;
+}
+
+.client-name {
+  margin-bottom: 15px;
+  color: #ff7e67;
+}
+
+/* .project-description {
+} */

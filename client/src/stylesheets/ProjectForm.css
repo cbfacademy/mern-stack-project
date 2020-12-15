@@ -8,6 +8,7 @@
   text-align: center;
   font-size: 40px;
   color: #ff7e67;
+  margin: 30px;
 }
 
 .formContainer {
@@ -38,5 +39,4 @@ input {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  
 }

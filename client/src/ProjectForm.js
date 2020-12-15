@@ -1,7 +1,7 @@
 import React from "react";
 import projectService from "./services/projectService";
-import "../src/stylesheets/Form.css";
-import Header from "../src/components/Header";
+import "../src/stylesheets/ProjectForm.css";
+// import Header from "../src/components/Header";
 
 //Declaring a react component
 class ProjectForm extends React.Component {
@@ -78,7 +78,6 @@ class ProjectForm extends React.Component {
     return (
       <>
         <React.Fragment>
-          <Header />
           <h2 className="formTitle">Project Form</h2>
         </React.Fragment>
         <form onSubmit={this.handleSubmit} className="formContainer">

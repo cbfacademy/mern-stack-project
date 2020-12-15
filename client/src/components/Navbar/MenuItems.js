@@ -10,8 +10,8 @@ export const MenuItems = [
     cName: "nav-links",
   },
   {
-    label: "Contact Us",
-    url: "#",
+    label: "Project Form",
+    url: "/projectform",
     cName: "nav-links",
   },
   {

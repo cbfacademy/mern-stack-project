@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import projectService from "./services/projectService";
 import About from "./pages/About";
 import Navbar from "./components/Navbar/Navbar";
+import ProjectForm from "./ProjectForm";
+import "./stylesheets/App.css";
 
 function App() {
   const [projects, setprojects] = useState(null);
@@ -28,10 +30,10 @@ function App() {
 
   const renderProject = (project) => {
     return (
-      <li key={project.id}>
-        <h3>{`${project.project_name}`}</h3>
-        <h4>{`${project.client_name}`}</h4>
-        <p>{`${project.project_description}`}</p>
+      <li key={project.id} className="project-profile">
+        <h3 className="project-name">{`${project.project_name}`} </h3>
+        <h4 className="client-name">{`${project.client_name}`}</h4>
+        <p className="project-description">{`${project.project_description}`}</p>
       </li>
     );
   };
@@ -47,7 +49,7 @@ function App() {
             <React.Fragment>
               <Navbar />
               <div>
-                <ul>
+                <ul className="projects-container">
                   {projects && projects.length > 0 ? (
                     projects.map((project) => renderProject(project)) // looping through project and rendering on the screen
                   ) : (
@@ -68,6 +70,16 @@ function App() {
             <React.Fragment>
               <Navbar />
               <About />
+            </React.Fragment>
+          )}
+        />
+        <Route
+          exact
+          path="/projectform"
+          render={() => (
+            <React.Fragment>
+              <Navbar />
+              <ProjectForm />
             </React.Fragment>
           )}
         />
