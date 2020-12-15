@@ -24,23 +24,18 @@
 .project-profile {
   border: 1px solid black;
   border-radius: 4px;
-  padding: 0.5rem;
+  padding: 10px;
   margin: 10px;
+  display: grid;
+  grid-template-columns: 30% 60%;
+  overflow-wrap: normal; 
 }
-
-/* .project-profile {
-  margin: 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline;
-  width: 80%;
-  border-bottom: 1px solid black;
-} */
 
 .project-name {
   font-size: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #07689f;
+  overflow-wrap: normal;
 }
 
 .client-name {
@@ -48,5 +43,13 @@
   color: #ff7e67;
 }
 
-/* .project-description {
-} */
+.project-element {
+  flex-wrap: wrap;
+  max-width: 40%;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}

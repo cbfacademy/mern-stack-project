@@ -76,8 +76,9 @@
     top: 80px;
     left: -90%;
     opacity: 1;
-    padding-left: 18%;
+    padding-left: 16%;
     transition: all 0.5s ease;
+    padding-top: 15px;
   }
 
   .nav-menu.active {
@@ -134,7 +135,7 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 20px;
   }
 
   .nav-links-mobile:hover {

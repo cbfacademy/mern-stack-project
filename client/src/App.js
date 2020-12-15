@@ -31,9 +31,13 @@ function App() {
   const renderProject = (project) => {
     return (
       <li key={project.id} className="project-profile">
-        <h3 className="project-name">{`${project.project_name}`} </h3>
-        <h4 className="client-name">{`${project.client_name}`}</h4>
-        <p className="project-description">{`${project.project_description}`}</p>
+        <div className="project-elements">
+          <h3 className="project-name">{`${project.project_name}`} </h3>
+          <h4 className="client-name">{`${project.client_name}`}</h4>
+        </div>
+        <div className="description-flex">
+          <p className="project-description">{`${project.project_description}`}</p>
+        </div>
       </li>
     );
   };
