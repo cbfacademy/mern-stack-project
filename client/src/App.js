@@ -46,6 +46,18 @@ function App() {
           render={() => (
             <React.Fragment>
               <Navbar />
+              <div>
+                <ul>
+                  {projects && projects.length > 0 ? (
+                    projects.map((project) => renderProject(project)) // looping through project and rendering on the screen
+                  ) : (
+                    <p> No projects found </p>
+                  )}
+                </ul>
+                <div>
+                  <button onClick={createProject}>Button</button>
+                </div>
+              </div>
             </React.Fragment>
           )}
         />
@@ -54,25 +66,12 @@ function App() {
           path="/about"
           render={() => (
             <React.Fragment>
-              {/* <Header /> */}
+              <Navbar />
               <About />
             </React.Fragment>
           )}
         />
       </Router>
-
-      <div>
-        <ul>
-          {projects && projects.length > 0 ? (
-            projects.map((project) => renderProject(project)) // looping through project and rendering on the screen
-          ) : (
-            <p> No projects found </p>
-          )}
-        </ul>
-        <div>
-          <button onClick={createProject}>Button</button>
-        </div>
-      </div>
     </>
   );
 }
