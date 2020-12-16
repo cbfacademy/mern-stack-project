@@ -17,7 +17,11 @@ const useForm = () => {
     });
   };
 
-  return { handleChange };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  return { handleChange, values, handleSubmit };
 };
 
 export default useForm;
