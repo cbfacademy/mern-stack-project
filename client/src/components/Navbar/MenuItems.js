@@ -21,7 +21,7 @@ export const MenuItems = [
   },
   {
     label: "Become a Client",
-    url: "#",
+    url: "/signup",
     cName: "nav-links-mobile",
   },
 ];
