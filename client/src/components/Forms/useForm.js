@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useForm = () => {
+const useForm = (validate) => {
   const [values, setValues] = useState({
     username: "",
     email: "",
@@ -8,6 +8,9 @@ const useForm = () => {
     password2: "",
   });
   const [errors, setErrors] = useState({});
+
+  //this is when submit form has not been pressed
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,9 +22,13 @@ const useForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    setErrors(validate(values));
+    //this is when the submit form has been pressed
+    setIsSubmitting(true);
   };
 
-  return { handleChange, values, handleSubmit };
+  return { handleChange, values, handleSubmit, errors };
 };
 
 export default useForm;
