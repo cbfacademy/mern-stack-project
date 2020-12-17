@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Navbar from "./components/Navbar/Navbar";
 import ProjectForm from "./ProjectForm";
 import "./stylesheets/App.css";
+import SignUpForm from "./SignUpForm";
 // import Form from "../src/components/Forms/Form";
 
 function App() {
@@ -88,7 +89,16 @@ function App() {
             </React.Fragment>
           )}
         />
-    
+        <Route
+          exact
+          path="/signup"
+          render={() => (
+            <React.Fragment>
+              <Navbar />
+              <SignUpForm />
+            </React.Fragment>
+          )}
+        />
       </Router>
     </>
   );

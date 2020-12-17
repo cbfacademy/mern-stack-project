@@ -1,15 +1,21 @@
 [
     {
         "client_id": 1,
+        "first_name": "admin",
+        "last_name": "admin",
+        "company_name": "admin",
+        "email": "admin1@admin.com",
         "username": "admin",
-        "email": "admin@admin.com",
-        "password": "admin"
+        "password": "admin1"
     },
     {
         "client_id": 2,
-        "username":"admin2",
-        "email": "admin3@admin.com",
-        "password": "password3"
+        "first_name": "admin",
+        "last_name": "admin",
+        "company_name": "admin",
+        "email": "admin2@admin.com",
+        "username": "admin",
+        "password": "admin2"
     }
 ]
 

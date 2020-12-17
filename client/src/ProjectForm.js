@@ -1,6 +1,6 @@
 import React from "react";
 import projectService from "./services/projectService";
-import "../src/stylesheets/ProjectForm.css";
+import "../src/stylesheets/Form.css";
 // import Header from "../src/components/Header";
 
 //Declaring a react component
