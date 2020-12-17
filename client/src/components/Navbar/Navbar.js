@@ -1,7 +1,35 @@
 import React from "react";
-import { MenuItems } from "./MenuItems";
+// import { MenuItems } from "./MenuItems";
 import "../../stylesheets/Navbar.css";
-// import { Button } from "./Button";
+import { Link } from "react-router-dom";
+
+const MenuItems = [
+  {
+    label: "Projects",
+    url: "/",
+    cName: "nav-links",
+  },
+  {
+    label: "About",
+    url: "/about",
+    cName: "nav-links",
+  },
+  {
+    label: "Project Form",
+    url: "/projectform",
+    cName: "nav-links",
+  },
+  {
+    label: "Sign In",
+    url: "#",
+    cName: "nav-links",
+  },
+  {
+    label: "Become a Client",
+    url: "/signup",
+    cName: "nav-links-mobile",
+  },
+];
 
 class Navbar extends React.Component {
   state = { clicked: false };
@@ -30,11 +58,13 @@ class Navbar extends React.Component {
             );
           })}
         </ul>
-        <button
-          className={this.state.clicked ? "nav-button active" : "nav-button"}
-        >
-          Become a Client
-        </button>
+        <Link to="/signup">
+          <button
+            className={this.state.clicked ? "nav-button active" : "nav-button"}
+          >
+            Become a Client
+          </button>
+        </Link>
       </nav>
     );
   }

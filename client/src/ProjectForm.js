@@ -100,7 +100,7 @@ class ProjectForm extends React.Component {
           <label>
             <div className="label">Project Description:</div>
             <input
-              type="textarea"
+              type="text"
               value={this.state.ProjectDescription}
               onChange={this.handleChangeProjectDescription}
             />
