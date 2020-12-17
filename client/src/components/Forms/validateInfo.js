@@ -3,7 +3,7 @@ export default function validateInfo(values) {
   //USERNAME
   //.trim gets rid of whitespace
   if (!values.username.trim()) {
-    errors.usename = "Username is required";
+    errors.username = "Username is required";
   }
   //EMAIL
   if (!values.email) {
@@ -19,7 +19,7 @@ export default function validateInfo(values) {
   } else if (values.password.length < 6) {
     errors.password = "Password needs to be 6 characters or more";
   }
-  //EMAIL
+  //PASSWORD 2
   if (!values.password2) {
     errors.password2 = "Email is required";
   } else if (values.password2 !== values.password) {

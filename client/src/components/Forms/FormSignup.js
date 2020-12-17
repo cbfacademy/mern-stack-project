@@ -3,8 +3,11 @@ import useForm from "./useForm";
 import validate from "./validateInfo";
 import "../../stylesheets/FormSignup.css";
 
-const FormSignup = (submitForm) => {
-  const { handleChange, values, handleSubmit, errors } = useForm(submitForm, validate);
+const FormSignup = ({ submitForm} ) => {
+  const { handleChange, values, handleSubmit, errors } = useForm(
+    submitForm,
+    validate
+  );
 
   return (
     <div className="form-content-right">
@@ -14,7 +17,7 @@ const FormSignup = (submitForm) => {
           information below.
         </h2>
         <div className="form-inputs">
-          <label htmlFor="username" className="form-label">
+          <label className="form-label">
             Username
           </label>
           <input
@@ -30,7 +33,7 @@ const FormSignup = (submitForm) => {
           {errors.username && <p>{errors.username}</p>}
         </div>
         <div className="form-inputs">
-          <label htmlFor="email" className="form-label">
+          <label className="form-label">
             Email
           </label>
           <input
@@ -45,7 +48,7 @@ const FormSignup = (submitForm) => {
           {errors.email && <p>{errors.email}</p>}
         </div>
         <div className="form-inputs">
-          <label htmlFor="password" className="form-label">
+          <label className="form-label">
             Password
           </label>
           <input
@@ -60,7 +63,7 @@ const FormSignup = (submitForm) => {
           {errors.password && <p>{errors.password}</p>}
         </div>
         <div className="form-inputs">
-          <label htmlFor="password2" className="form-label">
+          <label className="form-label">
             Confirm Password
           </label>
           <input
