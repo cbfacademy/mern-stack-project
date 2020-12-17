@@ -1,7 +1,7 @@
 import React from "react";
 import { MenuItems } from "./MenuItems";
 import "../../stylesheets/Navbar.css";
-import { Button } from "./Button";
+// import { Button } from "./Button";
 
 class Navbar extends React.Component {
   state = { clicked: false };
@@ -30,7 +30,11 @@ class Navbar extends React.Component {
             );
           })}
         </ul>
-        <Button>Become a Client</Button>
+        <button
+          className={this.state.clicked ? "nav-button active" : "nav-button"}
+        >
+          Become a Client
+        </button>
       </nav>
     );
   }
