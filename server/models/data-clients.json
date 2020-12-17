@@ -1,0 +1,15 @@
+[
+    {
+        "client_id": 1,
+        "username": "admin",
+        "email": "admin@admin.com",
+        "password": "admin"
+    },
+    {
+        "client_id": 2,
+        "username":"admin2",
+        "email": "admin3@admin.com",
+        "password": "password3"
+    }
+]
+

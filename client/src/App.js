@@ -6,7 +6,7 @@ import About from "./pages/About";
 import Navbar from "./components/Navbar/Navbar";
 import ProjectForm from "./ProjectForm";
 import "./stylesheets/App.css";
-import Form from "../src/components/Forms/Form";
+// import Form from "../src/components/Forms/Form";
 
 function App() {
   const [projects, setprojects] = useState(null);
@@ -88,17 +88,7 @@ function App() {
             </React.Fragment>
           )}
         />
-        <Route
-          exact
-          path="/signup"
-          render={() => (
-            <React.Fragment>
-              <Navbar />
-              <Form />
-              
-            </React.Fragment>
-          )}
-        />
+    
       </Router>
     </>
   );

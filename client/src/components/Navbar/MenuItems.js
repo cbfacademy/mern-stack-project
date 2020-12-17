@@ -1,6 +1,6 @@
 export const MenuItems = [
   {
-    label: "Home",
+    label: "Projects",
     url: "/",
     cName: "nav-links",
   },
@@ -21,7 +21,7 @@ export const MenuItems = [
   },
   {
     label: "Become a Client",
-    url: "/signup",
+    url: "#",
     cName: "nav-links-mobile",
   },
 ];
