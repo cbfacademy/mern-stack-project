@@ -13,16 +13,22 @@ class SignUpForm extends React.Component {
       CompanyName: "",
       ClientEmail: "",
       ClientUsername: "",
-      ClientPassword: ""
+      ClientPassword: "",
     };
 
     //wire up events - handleChange used when you change something inside textbox, handleSubmit is used when you used the submit button
-    
-    this.handleChangeClientFirstName = this.handleChangeClientFirstName.bind(this);
-    this.handleChangeClientLastName = this.handleChangeClientLastName.bind(this);
+
+    this.handleChangeClientFirstName = this.handleChangeClientFirstName.bind(
+      this
+    );
+    this.handleChangeClientLastName = this.handleChangeClientLastName.bind(
+      this
+    );
     this.handleChangeCompanyName = this.handleChangeCompanyName.bind(this);
     this.handleChangeClientEmail = this.handleChangeClientEmail.bind(this);
-    this.handleChangeClientUsername = this.handleChangeClientUsername.bind(this);
+    this.handleChangeClientUsername = this.handleChangeClientUsername.bind(
+      this
+    );
     this.handleChangeClientPassword = this.handleChangeClientPassword.bind(
       this
     );
@@ -77,7 +83,7 @@ class SignUpForm extends React.Component {
     return (
       <>
         <React.Fragment>
-          <h2 className="formTitle">Sign up</h2>
+          <h2 className="formTitle">Create a New Account</h2>
         </React.Fragment>
         <form onSubmit={this.handleSubmit} className="formContainer">
           <label>
@@ -128,8 +134,11 @@ class SignUpForm extends React.Component {
               onChange={this.handleClientPassword}
             />
           </label>
-
           <input type="submit" value="Sign up" className="button" />
+          <span className="sign-up-link">
+            Already have an account? <a href="/signup"> Sign in</a>
+          </span>
+          {/* need to fix the flex element  */}
         </form>
       </>
     );
