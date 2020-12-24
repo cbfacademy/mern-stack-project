@@ -7,10 +7,13 @@ import Navbar from "./components/Navbar/Navbar";
 import ProjectForm from "./ProjectForm";
 import "./stylesheets/App.css";
 import SignUpForm from "./SignUpForm";
+import SignInForm from "./SignInForm";
+import Search from "./components/Search";
 // import Form from "../src/components/Forms/Form";
 
 function App() {
   const [projects, setprojects] = useState(null);
+  const [keyword, setKeyword] = useState("");
 
   useEffect(() => {
     if (!projects) {
@@ -54,6 +57,20 @@ function App() {
           render={() => (
             <React.Fragment>
               <Navbar />
+              <Search
+                getprojects={getprojects}
+                keyword={keyword}
+                setKeyword={setKeyword}
+              />
+            </React.Fragment>
+          )}
+        />
+        <Route
+          exact
+          path="/projects"
+          render={() => (
+            <React.Fragment>
+              <Navbar />
               <div>
                 <ul className="projects-container">
                   {projects && projects.length > 0 ? (
@@ -86,6 +103,16 @@ function App() {
             <React.Fragment>
               <Navbar />
               <ProjectForm />
+            </React.Fragment>
+          )}
+        />
+        <Route
+          exact
+          path="/signin"
+          render={() => (
+            <React.Fragment>
+              <Navbar />
+              <SignInForm />
             </React.Fragment>
           )}
         />
