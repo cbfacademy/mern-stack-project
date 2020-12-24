@@ -5,7 +5,7 @@ function About() {
   return (
     <React.Fragment>
       <div className="about-container">
-        <h1 className="about-header">About <span>Experience</span></h1>
+        <h1 className="about-header">About Us</h1>
       </div>
     </React.Fragment>
   );
