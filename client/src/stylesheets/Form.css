@@ -28,10 +28,11 @@ input {
   height: 30px;
   font-size: 16px;
   padding-left: 6px;
+  border: 0.5px solid grey;
 }
 
 .button {
-  margin-top: 40px;
+  margin-top: 25px;
   border-radius: 8px;
   font-weight: bold;
   font-size: 20px;
@@ -52,4 +53,25 @@ input {
   border-bottom-style: none;
   border-left-style: none;
   border: 1.5px solid #ff7e67;
+}
+
+.sign-in-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
 }
