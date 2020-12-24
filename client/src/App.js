@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import projectService from "./services/projectService";
 import About from "./pages/About";
 import Navbar from "./components/Navbar/Navbar";
-import ProjectForm from "./ProjectForm";
+import ProjectForm from "./components/Forms/ProjectForm";
 import "./stylesheets/App.css";
-import SignUpForm from "./SignUpForm";
-import SignInForm from "./SignInForm";
+import SignUpForm from "./components/Forms/SignUpForm";
+import SignInForm from "./components/Forms/SignInForm";
 import Search from "./components/Search";
 // import Form from "../src/components/Forms/Form";
 
