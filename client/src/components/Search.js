@@ -1,4 +1,5 @@
 import React from "react";
+import "../stylesheets/Search.css";
 
 const Search = (props) => {
   const handleSubmit = (event) => {
@@ -7,7 +8,8 @@ const Search = (props) => {
   };
   return (
     <form className="search" onSubmit={handleSubmit}>
-      <input
+      <input 
+        className="input"
         type="text"
         placeholder="Search Projects..."
         value={props.keyword}
