@@ -32,6 +32,7 @@ class SignUpForm extends React.Component {
     this.handleChangeClientPassword = this.handleChangeClientPassword.bind(
       this
     );
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   //Actual definitions of functions
   // taking value in textbox and saving it in the state
@@ -56,14 +57,15 @@ class SignUpForm extends React.Component {
 
   //Sending post after pressing the submit button
   handleSubmit(event) {
-    alert(
-      "A profile was submitted: " +
-        this.state.ClientFirstName +
-        " " +
-        this.state.ClientLastName
-    );
+    // alert(
+    //   "A profile was submitted: " +
+    //     this.state.ClientFirstName +
+    //     " " +
+    //     this.state.ClientLastName
+    // );
 
     //Will create an empty project
+    console.log(this.state);
     var newClient = {
       client_id: 0,
       first_name: this.state.ClientFirstName,

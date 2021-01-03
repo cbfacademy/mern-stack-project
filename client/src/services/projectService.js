@@ -9,7 +9,7 @@ export default {
     return res.data || [];
   },
 
-  //Pass in newProject in the parameter to link it to the information in the Project Form 
+  //Pass in newProject in the parameter to link it to the information in the Project Form
   createProject: async (newClient) => {
     await axios.post(`/api/project`, newClient);
   },

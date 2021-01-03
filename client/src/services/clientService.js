@@ -10,7 +10,7 @@ export default {
   },
 
   //Pass in newProject in the parameter to link it to the information in the Project Form 
-  createProject: async (newClient) => {
+  createClient: async (newClient) => {
     await axios.post(`/api/client`, newClient);
   },
 };
