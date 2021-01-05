@@ -59,7 +59,7 @@ class SignInForm extends React.Component {
     return (
       <>
         <React.Fragment>
-          <h2 className="formTitle">Sign In</h2>
+          <h2 className="formTitle">Welcome Back!</h2>
         </React.Fragment>
         <form onSubmit={this.handleSubmit} className="formContainer">
           <label>
