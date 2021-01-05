@@ -13,7 +13,7 @@ import Search from "./components/Search";
 
 function App() {
   const [projects, setprojects] = useState(null);
-  const [keyword, setKeyword] = useState("");
+  const [searchedProjects, setsearchedProjects] = useState([]);
 
   useEffect(() => {
     if (!projects) {
@@ -47,6 +47,10 @@ function App() {
     );
   };
 
+  const renderSearchProject = (projects) => {
+    setsearchedProjects(projects);
+  };
+
   return (
     //32-41 telling the app what to do
     <>
@@ -57,11 +61,7 @@ function App() {
           render={() => (
             <React.Fragment>
               <Navbar />
-              <Search
-                getprojects={getprojects}
-                keyword={keyword}
-                setKeyword={setKeyword}
-              />
+              <Search projects={projects} search={renderSearchProject} />
             </React.Fragment>
           )}
         />
@@ -127,6 +127,15 @@ function App() {
           )}
         />
       </Router>
+      <div>
+        <ul className="projects-container">
+          {searchedProjects && searchedProjects.length > 0 ? (
+            searchedProjects.map((project) => renderProject(project)) // looping through project and rendering on the screen
+          ) : (
+            <p> No projects found </p>
+          )}
+        </ul>
+      </div>
     </>
   );
 }
