@@ -24,7 +24,13 @@ class Search extends React.Component {
     event.preventDefault();
 
     const results = projects.filter(
-      (project) => project.project_name === this.state.SearchBar
+      (project) =>
+        project.project_name
+          .toLowerCase()
+          .includes(this.state.SearchBar.toLowerCase()) ||
+        project.client_name
+          .toLowerCase()
+          .includes(this.state.SearchBar.toLowerCase())
     );
 
     this.props.search(results);
