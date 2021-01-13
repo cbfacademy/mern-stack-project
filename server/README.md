@@ -1,8 +1,8 @@
-# Black Codher Personal Personal Project - Server side (backend)
+# Black Codher Personal Personal Project - Server s"id"e (backend)
 
 All of your back end code should be in this folder.
 
-Once you have your development environment up and running you'll be able to see the app running here:
+Once you have your development environment up and running you"ll be able to see the app running here:
 
 ```
 http://localhost:5000
@@ -27,28 +27,28 @@ and you should see an array of objects that looks similar to the below (but a bi
 ```
 [
   {
-    "_id": "5fc41c0e17878f1e2d5a2209",
+    "_"id"": "5fc41c0e17878f1e2d5a2209",
     "first_name": "Gary",
     "last_name": "McPherson",
     "location": "London",
     "__v": 0
   },
   {
-    "_id": "5fc41c1f17878f1e2d5a220a",
+    "_"id"": "5fc41c1f17878f1e2d5a220a",
     "first_name": "Charlene",
     "last_name": "Hunter ",
     "location": "London",
     "__v": 0
   },
   {
-    "_id": "5fc41c2e17878f1e2d5a220b",
+    "_"id"": "5fc41c2e17878f1e2d5a220b",
     "first_name": "Tanya",
     "last_name": "Powell ",
     "location": "London",
     "__v": 0
   },
   {
-    "_id": "5fc41c3917878f1e2d5a220c",
+    "_"id"": "5fc41c3917878f1e2d5a220c",
     "first_name": "Oyin",
     "last_name": "Adebayo ",
     "location": "Birmingham",

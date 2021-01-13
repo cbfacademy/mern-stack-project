@@ -1,0 +1,157 @@
+[
+    {   "id": 1,
+        "questionText": "I need help with",
+        "type": "dropdown",
+        "options": [
+                {"Text": "Documents", "Target": 2}
+            
+        ]
+
+   },
+
+    
+    {
+        "id": 2,
+        "questionText": "Please choose an entity type",
+            "type": "multiplechoice",
+            "options": [
+            { "Text": "AG  bösennotiert","Target": 9},
+            { "Text": "AG  nicht börsennotiert", "Target": 10},
+            { "Text": "eingetragener Kaufmann eK", "Target": 4},
+            { "Text": "eingetragener Verein eV or eingetragene Genossenschaft eG", "Target": 12},
+            { "Text": "Einzelunternehmer", "Target": 3},
+            { "Text": "GbR or BGA", "Target": 6},
+            { "Text": "GmbH or UG", "Target": 5},
+            { "Text": "GmbH & Co KG", "Target": 8},
+            { "Text": "KG or OHG", "Target": 7},
+            { "Text": "Körperschaft des öffentlichen Rechts KöR", "Target": 11}
+
+        ]
+    },
+
+    {
+        "id": 3,
+        "questionText": "You will need the following documents for an Einzelunternehmer",
+            "type": "statement",
+            "Text": 
+           ["1. Gewerbeanmeldung/ Handwerkskammer",
+            "2. ID of Einzelunternehmer",
+            "3. Legitimation",
+            
+            "Einzelunternehmer is a natürliche Person."]
+    },
+    {
+        "id": 4,
+        "questionText": "You will need the following documents for an eingetragener Kaufmann",
+        "type": "statement",
+            "Text": 
+                ["1. Handelsregister",
+                 "2. ID of eingetragener Kaufmann",
+                 "3. Legitimation",
+
+                "Eingetragener Kaufmann is a natürliche Person."]
+            
+    },
+    {
+        "id": 5,
+        "questionText": "You will need the following documents for a GmbH or UG",
+        "type": "statement",
+            "Text": 
+                ["1. Handelsregister",
+                "2. ID of authorised signatory",
+                "3. Crefo/Creditsafe",
+                "4. Transparenzregister",
+                "5. Legitimation",        
+                
+                "GmbH or UG is a juristische Person."]
+    },
+    {
+        "id": 6,
+        "questionText": "You will need the following documents for a GbR or BGA",
+        "type": "statement",
+        "Text": 
+                ["1. Gewerbeanmeldung",
+                "2. ID of all partners incl signatures",
+                "3. Legitimation of all signatories", 
+                
+                "GbR or BGA is a natürliche Person."]
+    },
+    {  
+        "id": 7,
+        "questionText": "You will need the following documents for a KG or OHG",
+        "type": "statement",
+            "Text": 
+                ["1. Handelsregister",
+                "2. ID of authorised signatory",
+                "3. Crefo/Creditsafe",
+                "4. Transparenzregister",
+                "5. Legitimation",
+
+                "KG or OHG is a juristische Person."]
+    },
+
+    {   "id": 8,
+        "questionText": "You will need the following documents for an GmbH & Co. KG",
+        "type": "statement",
+             "Text": 
+                ["1. Handelsregister (from the liable party)",
+                "2. ID of authorised signatory",
+                "3. Crefo/Creditsafe (both GmbH and KG)",
+                "4. Transparenzregister (GmbH & Co. KG)",
+                "5. Legitimation",
+
+                "GmbH & Co. KG is a natürliche Person."]
+            
+    },
+    {  
+        "id": 9,
+        "questionText": "You will need the following documents for a AG börsennotiert",
+        "type": "statement",
+        "Text":
+                ["1. Handelsregister",
+                "2. ID of authorised signatory (Vertretung)",
+                "3. Crefo/Creditsafe",
+                "4. Legitimation",  
+
+                "AG börsennotiert is a juristische Person."]
+    },
+    {  "id": 10,
+        "questionText": "You will need the following documents for an AG nicht börsennotiert",
+        "type": "statement",
+        "Text": 
+                ["1. Handelsregister",
+                "2. ID of authorised signatory (Vertretung)",
+                "3. Crefo/Creditsafe",
+                "4. Transparenzregister",
+                "5. Legitimation",
+
+                "AG nicht börsennotiert is a juristische Person."]
+            },
+    
+    {  "id": 11,
+        "questionText": "You will need the following documents for a KöR",
+        "type": "statement",
+        "Text": 
+                ["1. ID of authorised signatory (Bürgermeister)",
+                "2. Legitimation",
+
+                "KöR is a juristische Person."]
+        
+            },
+
+     {  "id": 12,
+        "questionText": "You will need the following documents for a eingetragener Verein or eingetragene Genossenschaft",
+        "type": "statement",
+             "Text": 
+                 ["1.  Handelsregister",
+                 "2. ID of authorised signatory",
+                 "3. Crefo/Creditsafe",
+                 "4. Transparenzregister",
+                 "5. Legitimation",
+        
+                 "Eingetragener Verein or eingetragene Genossenschaft is a juristische Person."]
+                 
+                    }
+   
+        ]
+        

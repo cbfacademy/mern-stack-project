@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 // SERVICES
-import userService from './services/userService';
+import userService from "./services/userService";
 
 function App() {
   const [users, setusers] = useState(null);
@@ -19,7 +19,7 @@ function App() {
 
   const renderUser = (user) => {
     return (
-      <li key={user._id}>
+      <li key={user._"id"}>
         <h3>
           {`${user.first_name} 
           ${user.last_name}`}

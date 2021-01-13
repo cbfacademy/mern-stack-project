@@ -1,10 +1,12 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const userSchema = new Schema({
-  first_name: String,
-  last_name: String,
-  location: String,
+  id: Number,
+  questionText: String,
+  type: String,
+  options: [{Text:String, Target: Number}],
+  Text: String,
 });
 
-mongoose.model('users', userSchema);
+mongoose.model("guide", userSchema, "guide");
