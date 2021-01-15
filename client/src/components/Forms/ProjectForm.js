@@ -2,6 +2,7 @@ import React from "react";
 import projectService from "../../services/projectService";
 import "../../stylesheets/Form.css";
 // import Header from "../src/components/Header";
+import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
 
 //Declaring a react component
 class ProjectForm extends React.Component {
@@ -12,7 +13,8 @@ class ProjectForm extends React.Component {
       ClientName: "",
       ProjectName: "",
       ProjectDescription: "",
-      Location: "",
+      Country: "",
+      Region: "",
       Date: "",
     };
 
@@ -22,10 +24,18 @@ class ProjectForm extends React.Component {
     this.handleChangeProjectDescription = this.handleChangeProjectDescription.bind(
       this
     );
-    this.handleChangeLocation = this.handleChangeLocation.bind(this);
     this.handleChangeDate = this.handleChangeDate.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  selectCountry(val) {
+    this.setState({ Country: val });
+  }
+
+  selectRegion(val) {
+    this.setState({ Region: val });
+  }
+
   //Actual definitions of functions
   // taking value in textbox and saving it in the state
   handleChangeClientName(event) {
@@ -63,7 +73,7 @@ class ProjectForm extends React.Component {
       client_name: this.state.ClientName,
       project_name: this.state.ProjectName,
       project_description: this.state.ProjectDescription,
-      location: this.state.Location,
+      location: { Country: this.state.Country, Region: this.state.Region },
       date: this.state.Date,
       contact_information: "",
       skills: ["html", "json", "javascript"],
@@ -109,10 +119,14 @@ class ProjectForm extends React.Component {
           </label>
           <label>
             <div className="label">Location:</div>
-            <input
-              type="text"
-              value={this.state.Location}
-              onChange={this.handleChangeLocation}
+            <CountryDropdown
+              value={this.state.Country}
+              onChange={(val) => this.selectCountry(val)}
+            />
+            <RegionDropdown
+              country={this.state.Country}
+              value={this.state.Region}
+              onChange={(val) => this.selectRegion(val)}
             />
           </label>
           <label>
@@ -130,5 +144,23 @@ class ProjectForm extends React.Component {
     );
   }
 }
+
+// DROPDOWN FOR LOCATION
+
+// class Example extends React.Component {
+//   constructor (props) {
+//     super(props);
+//     this.state = { country: '', region: '' };
+//   }
+
+//   render () {
+//     const { country, region } = this.state;
+//     return (
+//       <div>
+
+//       </div>
+//     );
+//   }
+// }
 
 export default ProjectForm;

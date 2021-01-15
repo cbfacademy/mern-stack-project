@@ -6,7 +6,7 @@ const projectSchema = new Schema({
   client_name: String,
   project_name: String,
   project_description: String,
-  location: String,
+  location: Object,
   date: String,
   contact_information: String,
   skills: Array,

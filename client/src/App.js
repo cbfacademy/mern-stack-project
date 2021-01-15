@@ -39,6 +39,7 @@ function App() {
         <div className="project-elements">
           <h3 className="project-name">{`${project.project_name}`} </h3>
           <h4 className="client-name">{`${project.client_name}`}</h4>
+          <h5 className="project-Location">{`${project.location.Region}, ${project.location.Country}`}</h5>
         </div>
         <div className="description-flex">
           <p className="project-description">{`${project.project_description}`}</p>
@@ -61,7 +62,20 @@ function App() {
           render={() => (
             <React.Fragment>
               <Navbar />
+              <p className="tagline">
+                Find the <span className="tagline-span-1">projects</span> and
+                build up your <span className="tagline-span-2">CV</span>
+              </p>
               <Search projects={projects} search={renderSearchProject} />
+              <div>
+                <ul className="projects-container">
+                  {searchedProjects && searchedProjects.length > 0 ? (
+                    searchedProjects.map((project) => renderProject(project)) // looping through project and rendering on the screen
+                  ) : (
+                    <p> No projects found </p>
+                  )}
+                </ul>
+              </div>
             </React.Fragment>
           )}
         />
@@ -71,6 +85,16 @@ function App() {
           render={() => (
             <React.Fragment>
               <Navbar />
+              {/* <Search projects={projects} search={renderSearchProject} />
+              <div>
+                <ul className="projects-container">
+                  {searchedProjects && searchedProjects.length > 0 ? (
+                    searchedProjects.map((project) => renderProject(project)) // looping through project and rendering on the screen
+                  ) : (
+                    <p> No projects found </p>
+                  )}
+                </ul>
+              </div> */}
               <div>
                 <ul className="projects-container">
                   {projects && projects.length > 0 ? (
@@ -127,15 +151,6 @@ function App() {
           )}
         />
       </Router>
-      <div>
-        <ul className="projects-container">
-          {searchedProjects && searchedProjects.length > 0 ? (
-            searchedProjects.map((project) => renderProject(project)) // looping through project and rendering on the screen
-          ) : (
-            <p> No projects found </p>
-          )}
-        </ul>
-      </div>
     </>
   );
 }
