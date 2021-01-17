@@ -1,5 +1,5 @@
 .App {
-  "Text"-align: center;
+  Text-align: center;
 }
 
 .App-logo {
@@ -35,4 +35,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+button {
+  display: grid;
+  grid-column-start: 2;
 }

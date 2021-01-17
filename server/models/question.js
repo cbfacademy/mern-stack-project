@@ -1,13 +1,12 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const userSchema = new Schema({
+const questionSchema = new Schema({
   id: Number,
   questionText: String,
   type: String,
   options: [{Text:String, Target: Number}],
-  Text: String,
+  Text: Array,
 });
 
-mongoose.model("guide", userSchema, "guide");
-
+mongoose.model("questions", questionSchema);

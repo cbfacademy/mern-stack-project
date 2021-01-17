@@ -1,7 +1,7 @@
 [
     {   "id": 1,
         "questionText": "I need help with",
-        "type": "dropdown",
+        "type": "multiplechoice",
         "options": [
                 {"Text": "Documents", "Target": 2}
             
@@ -46,7 +46,7 @@
         "type": "statement",
             "Text": 
                 ["1. Handelsregister",
-                 "2. ID of eingetragener Kaufmann",
+                 "2. ID of signatory",
                  "3. Legitimation",
 
                 "Eingetragener Kaufmann is a natürliche Person."]
@@ -59,7 +59,7 @@
             "Text": 
                 ["1. Handelsregister",
                 "2. ID of authorised signatory",
-                "3. Crefo/Creditsafe",
+                "3. Creditreform or Creditsafe",
                 "4. Transparenzregister",
                 "5. Legitimation",        
                 
@@ -91,12 +91,12 @@
     },
 
     {   "id": 8,
-        "questionText": "You will need the following documents for an GmbH & Co. KG",
+        "questionText": "You will need the following documents for a GmbH & Co. KG",
         "type": "statement",
              "Text": 
                 ["1. Handelsregister (from the liable party)",
                 "2. ID of authorised signatory",
-                "3. Crefo/Creditsafe (both GmbH and KG)",
+                "3. Crefo/Creditsafe (GmbH & Co. KG)",
                 "4. Transparenzregister (GmbH & Co. KG)",
                 "5. Legitimation",
 
