@@ -12,7 +12,7 @@
     
     {
         "id": 2,
-        "questionText": "Please choose an entity type",
+        "questionText": "Which entity do you need help with",
             "type": "multiplechoice",
             "options": [
             { "Text": "AG  bösennotiert","Target": 9},

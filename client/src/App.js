@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Questionnaire from "./components/Questionnaire";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 //SERVICES Question
 import questionService from "./services/questionService";
@@ -78,12 +81,21 @@ const renderStatement = (statement) => {
             return renderStatement(question)
           }
     
-    }) :(<p>Pick an entity</p>)}
+    }) :(<p>Please choose an entity</p>)}
 
 
       </ul>
     </div>
   );
+
+  return (
+    <div className= "App">
+        <Header />
+        <Questionnaire />
+        <Footer />
+    </div>
+);
+
 }
 
 export default App;
