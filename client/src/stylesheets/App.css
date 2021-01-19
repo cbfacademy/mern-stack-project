@@ -54,3 +54,19 @@
   flex-direction: column;
   flex: auto;
 }
+
+.tagline {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 40px;
+}
+
+.tagline-span-1 {
+  color: #07689f;
+  font-weight: bold;
+}
+
+.tagline-span-2 {
+  color: #07689f;
+  font-weight: bold;
+}
