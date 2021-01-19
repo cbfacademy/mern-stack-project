@@ -19,5 +19,7 @@ module.exports = (app) => {
   });
 };
 
+//Add method in here to delete, add a button that will delete a project, wire button to call function
+//Project service, project route and mongodb 
 
 // http://localhost:5000/api/project

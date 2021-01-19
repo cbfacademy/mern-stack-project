@@ -6,6 +6,7 @@ function About() {
     <React.Fragment>
       <div className="about-container">
         <h1 className="about-header">About Us</h1>
+        <p className="about-paragraph">Welcome to Experience. This website is... </p>
       </div>
     </React.Fragment>
   );

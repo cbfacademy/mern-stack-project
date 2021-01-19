@@ -132,7 +132,7 @@ class SignUpForm extends React.Component {
             <div className="label">Password:</div>
             <input
               type="text"
-              value={this.state.Date}
+              value={this.state.ClientPassword}
               onChange={this.handleClientPassword}
             />
           </label>

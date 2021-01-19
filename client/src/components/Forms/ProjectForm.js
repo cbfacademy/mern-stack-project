@@ -122,17 +122,19 @@ class ProjectForm extends React.Component {
             <CountryDropdown
               value={this.state.Country}
               onChange={(val) => this.selectCountry(val)}
+              className="countryDropdown"
             />
             <RegionDropdown
               country={this.state.Country}
               value={this.state.Region}
               onChange={(val) => this.selectRegion(val)}
+              className="regionDropdown"
             />
           </label>
           <label>
-            <div className="label">Deadline:</div>
+            <div className="label">Application Deadline:</div>
             <input
-              type="text"
+              type="date"
               value={this.state.Date}
               onChange={this.handleChangeDate}
             />

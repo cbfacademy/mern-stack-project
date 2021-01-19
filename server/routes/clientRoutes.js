@@ -8,7 +8,16 @@ module.exports = (app) => {
     return res.status(200).send(clients);
   });
 
-  // Get's all clients/users
+  //POST - add a new clients/users
+  app.post(`/api/client`, async (req, res) => {
+    const newClient = await Client.create(req.body); // contain anything on the form
+    return res.status(201).send({
+      error: false,
+      newClient,
+    });
+  });
+
+  // POST - login functionality
   app.post(`/api/login`, async (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
@@ -19,15 +28,6 @@ module.exports = (app) => {
     } else {
       return res.status(400).send(clients);
     }
-  });
-
-  //POST - add a new clients/users
-  app.post(`/api/client`, async (req, res) => {
-    const newClient = await Client.create(req.body); // contain anything on the form
-    return res.status(201).send({
-      error: false,
-      newClient,
-    });
   });
 };
 
