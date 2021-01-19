@@ -8,6 +8,19 @@ module.exports = (app) => {
     return res.status(200).send(clients);
   });
 
+  // Get's all clients/users
+  app.post(`/api/login`, async (req, res) => {
+    const username = req.body.username;
+    const password = req.body.password;
+
+    const clients = await Client.find({ username, password }); // calling function to get the data
+    if (clients.length >= 1) {
+      return res.status(200).send(clients);
+    } else {
+      return res.status(400).send(clients);
+    }
+  });
+
   //POST - add a new clients/users
   app.post(`/api/client`, async (req, res) => {
     const newClient = await Client.create(req.body); // contain anything on the form
