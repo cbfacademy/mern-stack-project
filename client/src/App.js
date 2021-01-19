@@ -40,6 +40,7 @@ function App() {
           <h3 className="project-name">{`${project.project_name}`} </h3>
           <h4 className="client-name">{`${project.client_name}`}</h4>
           <h5 className="project-Location">{`${project.location.Region}, ${project.location.Country}`}</h5>
+          <p className="project-date">{`${project.date}`}</p>
         </div>
         <div className="description-flex">
           <p className="project-description">{`${project.project_description}`}</p>
