@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 
@@ -7,8 +8,8 @@ require("./models/Users");
 require("./models/projects");
 require("./models/clients");
 
-
-const app = express();
+const app = express(); // CHECK IF THIS IS CORRECT
+app.use(cors());
 
 mongoose.Promise = global.Promise;
 mongoose.connect(

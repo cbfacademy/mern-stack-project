@@ -15,13 +15,23 @@ const MenuItems = [
     cName: "nav-links",
   },
   {
+    label: "Dashboard",
+    url: "/dashboard",
+    cName: "nav-links",
+  },
+  {
+    label: "Preferences",
+    url: "/preferences",
+    cName: "nav-links",
+  },
+  {
     label: "Project Form",
     url: "/projectform",
     cName: "nav-links",
   },
   {
-    label: "Sign In",
-    url: "/signin",
+    label: "Login",
+    url: "/login",
     cName: "nav-links",
   },
   {

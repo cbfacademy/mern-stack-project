@@ -7,13 +7,16 @@ import Navbar from "./components/Navbar/Navbar";
 import ProjectForm from "./components/Forms/ProjectForm";
 import "./stylesheets/App.css";
 import SignUpForm from "./components/Forms/SignUpForm";
-import SignInForm from "./components/Forms/SignInForm";
+import LoginForm from "./components/Forms/LoginForm";
 import Search from "./components/Search";
 // import Form from "../src/components/Forms/Form";
+import Dashboard from "./components/Dashboard";
+import Preferences from "./components/Preferences";
 
 function App() {
   const [projects, setprojects] = useState(null);
   const [searchedProjects, setsearchedProjects] = useState([]);
+  const [token, setToken] = useState();
 
   useEffect(() => {
     if (!projects) {
@@ -52,6 +55,11 @@ function App() {
   const renderSearchProject = (projects) => {
     setsearchedProjects(projects);
   };
+
+//THIS MAKES THE LOGIN PAGE THE FIRST THING ON THE WEBSIT
+  // if(!token) {
+  //   return <LoginForm setToken={setToken} />
+  // }
 
   return (
     //32-41 telling the app what to do
@@ -123,6 +131,26 @@ function App() {
         />
         <Route
           exact
+          path="/dashboard"
+          render={() => (
+            <React.Fragment>
+              <Navbar />
+              <Dashboard />
+            </React.Fragment>
+          )}
+        />
+        <Route
+          exact
+          path="/preferences"
+          render={() => (
+            <React.Fragment>
+              <Navbar />
+              <Preferences />
+            </React.Fragment>
+          )}
+        />
+        <Route
+          exact
           path="/projectform"
           render={() => (
             <React.Fragment>
@@ -133,11 +161,11 @@ function App() {
         />
         <Route
           exact
-          path="/signin"
+          path="/login"
           render={() => (
             <React.Fragment>
               <Navbar />
-              <SignInForm />
+              <LoginForm />
             </React.Fragment>
           )}
         />
