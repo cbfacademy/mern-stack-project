@@ -53,9 +53,9 @@ class Navbar extends React.Component {
           {MenuItems.map((items, index) => {
             return (
               <li key={index}>
-                <a className={items.cName} href={items.url}>
+                <Link to={items.url} className={items.cName}>
                   {items.label}
-                </a>
+                </Link>
               </li>
             );
           })}
