@@ -10,7 +10,7 @@ import SignUpForm from "./components/Forms/SignUpForm";
 import LoginForm from "./components/Forms/LoginForm";
 import Search from "./components/Search";
 // import Form from "../src/components/Forms/Form";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   const [projects, setprojects] = useState(null);
@@ -65,8 +65,8 @@ function App() {
             <React.Fragment>
               <Navbar />
               <p className="tagline">
-                Find the <span className="tagline-span-1">projects</span> and
-                build up your <span className="tagline-span-2">CV</span>
+                Find the <span className="tagline-span-1">opportunities</span>{" "}
+                and build up your <span className="tagline-span-2">CV</span>
               </p>
               <Search projects={projects} search={renderSearchProject} />
               <div>
@@ -97,6 +97,7 @@ function App() {
                   )}
                 </ul>
               </div> */}
+              <h1 className="opportunities-header">Opportunities</h1>
               <div>
                 <ul className="projects-container">
                   {projects && projects.length > 0 ? (
