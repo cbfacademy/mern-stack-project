@@ -10,3 +10,28 @@
   font-size: 20px;
   margin-top: 30px;
 }
+
+.about-button {
+  margin-top: 25px;
+  border-radius: 8px;
+  background-color: #ff7e67;
+  color: white;
+  height: 60px;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 20px;
+  border-style: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.about-button:hover {
+  background-color: white;
+  color: #ff7e67;
+  border-bottom-style: none;
+  border-left-style: none;
+  border: 1.5px solid #ff7e67;
+}
