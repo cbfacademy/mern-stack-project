@@ -32,7 +32,7 @@ input {
 }
 
 .button {
-  margin-top: 25px;
+  margin-top: 30px;
   border-radius: 8px;
   font-weight: bold;
   font-size: 20px;
@@ -55,25 +55,33 @@ input {
   border: 1.5px solid #ff7e67;
 }
 
-.sign-in-link {
+.login-sentence,
+.sign-up-sentence {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.sign-up-link {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   margin-top: 20px;
   margin-bottom: 60px;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+}
+
+/* .sign-up-sentence {
+  
+} */
+
+.sign-up-link,
+.login-link {
+  margin-left: 5px;
+  margin-top: 5px;
+  font-weight: bold;
 }
 
 a {
   text-decoration: none;
+  color: #07689f;
+}
+
+a:hover {
+  color: #ff7e67;
 }
 
 .countryDropdown {

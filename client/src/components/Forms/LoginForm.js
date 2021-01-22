@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import clientService from "../../services/clientService";
 import "../../stylesheets/Form.css";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 //Declaring a react component
 
@@ -51,9 +52,12 @@ function LoginForm({ setToken }) {
           />
         </label>
         <input type="submit" value="Sign in" className="button" />
-        <span className="sign-in-link">
-          Do not have an account? Sign up <a href="/signin">here</a>{" "}
-        </span>
+        <div className="sign-up-sentence">
+          <p>Do not have an account?</p>
+          <p className="sign-up-link">
+            <Link to="/signup">Sign up here</Link>
+          </p>
+        </div>
       </form>
     </>
   );

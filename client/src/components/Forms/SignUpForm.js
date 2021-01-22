@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import clientService from "../../services/clientService";
 import "../../stylesheets/Form.css";
+import { Link } from "react-router-dom";
 
 //FIELDS DO NOT CLEAR AFTER SUBMISSION
 
@@ -85,19 +86,18 @@ function SignUpForm() {
           />
         </label>
         <input type="submit" value="Sign up" className="button" />
-        <span className="sign-up-link">
-          Already have an account? <a href="/signup"> Sign in</a>
-        </span>
-        {/* need to fix the flex element  */}
+        <div className="login-sentence">
+          <p>Already have an account?</p>
+          <p className="login-link">
+            <Link to="/login">Login here</Link>
+          </p>
+        </div>
       </form>
     </>
   );
 }
 
 export default SignUpForm;
-
-
-
 
 //Declaring a react component
 // class SignUpForm extends React.Component {
