@@ -15,7 +15,7 @@ export default function Dashboard() {
   return (
     <>
       <div>
-        <h1 className="dashboard-header">Dashboard</h1>
+        <h1 className="dashboard-title">Dashboard</h1>
       </div>
       <div className="flex-container">
         <div className="dashboard-profile">
@@ -27,6 +27,9 @@ export default function Dashboard() {
         </div>
         <div className="dashboard-profile">
           <h2 className="profile-title">Project Form</h2>
+          <p className="profile-paragraph">
+            Complete the form to create a project
+          </p>
           <Link to="/projectform">
             <button className="profile-button">Create Project</button>
           </Link>
