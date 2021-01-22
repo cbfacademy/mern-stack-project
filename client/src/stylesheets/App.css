@@ -70,3 +70,11 @@
   color: #07689f;
   font-weight: bold;
 }
+
+.opportunities-header {
+  text-align: center;
+  color: #ff7e67;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
