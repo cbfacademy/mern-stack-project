@@ -28,12 +28,6 @@ function App() {
     setprojects(res);
   };
 
-  const createProject = async () => {
-    // copy this and three const and create versions for projects
-    // let res = await projectService.createProject();
-    await projectService.createProject();
-  };
-
   const renderProject = (project) => {
     return (
       <li key={project.id} className="project-profile">
@@ -97,7 +91,7 @@ function App() {
                   )}
                 </ul>
               </div> */}
-              <h1 className="opportunities-header">Opportunities</h1>
+              <h1 className="projects-header">Opportunities</h1>
               <div>
                 <ul className="projects-container">
                   {projects && projects.length > 0 ? (
@@ -106,9 +100,6 @@ function App() {
                     <p> No projects found </p>
                   )}
                 </ul>
-                <div>
-                  <button onClick={createProject}>Button</button>
-                </div>
               </div>
             </React.Fragment>
           )}
