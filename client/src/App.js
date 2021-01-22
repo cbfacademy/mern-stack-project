@@ -11,12 +11,10 @@ import LoginForm from "./components/Forms/LoginForm";
 import Search from "./components/Search";
 // import Form from "../src/components/Forms/Form";
 import Dashboard from "./components/Dashboard";
-import Preferences from "./components/Preferences";
 
 function App() {
   const [projects, setprojects] = useState(null);
   const [searchedProjects, setsearchedProjects] = useState([]);
-  const [token, setToken] = useState();
 
   useEffect(() => {
     if (!projects) {
@@ -56,11 +54,6 @@ function App() {
     setsearchedProjects(projects);
   };
 
-//THIS MAKES THE LOGIN PAGE THE FIRST THING ON THE WEBSIT
-  // if(!token) {
-  //   return <LoginForm setToken={setToken} />
-  // }
-
   return (
     //32-41 telling the app what to do
     <>
@@ -90,7 +83,7 @@ function App() {
         />
         <Route
           exact
-          path="/projects"
+          path="/opportunities"
           render={() => (
             <React.Fragment>
               <Navbar />
@@ -136,16 +129,6 @@ function App() {
             <React.Fragment>
               <Navbar />
               <Dashboard />
-            </React.Fragment>
-          )}
-        />
-        <Route
-          exact
-          path="/preferences"
-          render={() => (
-            <React.Fragment>
-              <Navbar />
-              <Preferences />
             </React.Fragment>
           )}
         />

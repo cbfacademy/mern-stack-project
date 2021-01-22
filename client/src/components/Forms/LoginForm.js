@@ -5,9 +5,6 @@ import PropTypes from "prop-types";
 
 //Declaring a react component
 
-// export default function Login({ setToken }) { <======= WHERE WOULD I PUT THIS IN MY CODE
-//   return(
-
 async function loginUser(credentials) {
   return fetch("http://localhost:5000/api/login", {
     method: "POST",
@@ -23,6 +20,8 @@ function LoginForm({ setToken }) {
   const [ClientPassword, setClientPassword] = useState("");
 
   const handleSubmit = async (e) => {
+    // alert("Welcome back " + CompanyName)
+
     e.preventDefault();
     const token = await loginUser({
       ClientUsername,
@@ -48,8 +47,8 @@ function LoginForm({ setToken }) {
         <label>
           <div className="label">Password:</div>
           <input
-            type="text"
-            value={ClientUsername}
+            type="password"
+            value={ClientPassword}
             onChange={(e) => setClientPassword(e.target.value)}
           />
         </label>
@@ -150,4 +149,4 @@ LoginForm.propTypes = {
 //   setToken: PropTypes.func.isRequired,
 // };
 
-// export default LoginForm;
+export default LoginForm;
