@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const MenuItems = [
   {
-    label: "Projects",
-    url: "/projects",
+    label: "Opportunities",
+    url: "/opportunities",
     cName: "nav-links",
   },
   {
@@ -17,16 +17,6 @@ const MenuItems = [
   {
     label: "Dashboard",
     url: "/dashboard",
-    cName: "nav-links",
-  },
-  {
-    label: "Preferences",
-    url: "/preferences",
-    cName: "nav-links",
-  },
-  {
-    label: "Project Form",
-    url: "/projectform",
     cName: "nav-links",
   },
   {

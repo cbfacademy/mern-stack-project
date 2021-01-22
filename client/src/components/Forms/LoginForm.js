@@ -20,8 +20,6 @@ function LoginForm({ setToken }) {
   const [ClientPassword, setClientPassword] = useState("");
 
   const handleSubmit = async (e) => {
-    // alert("Welcome back " + CompanyName)
-
     e.preventDefault();
     const token = await loginUser({
       ClientUsername,
@@ -33,7 +31,7 @@ function LoginForm({ setToken }) {
   return (
     <>
       <React.Fragment>
-        <h2 className="formTitle">Welcome Back!</h2>
+        <h2 className="formTitle">Login</h2>
       </React.Fragment>
       <form onSubmit={handleSubmit} className="formContainer">
         <label>
