@@ -14,14 +14,14 @@ import Dashboard from "./pages/Dashboard";
 import ClientProjects from "./pages/ClientProjects";
 import Opportunities from "./components/Opportunities";
 import Footer from "./components/Footer";
-// import useToken from "./components/useToken";
+import useToken from "./components/useToken"; //TEST
 // import useCurrentUsername from "./components/useCurrentUsername";
 
 function App() {
   const [projects, setprojects] = useState(null);
   const [searchedProjects, setsearchedProjects] = useState([]);
-  // const [token, setToken] = useToken();
-  const[token, setToken] = useState();
+  // const { token, setToken } = useToken(); //TEST
+  const [token, setToken] = useState();
   // const [currentUsername, setCurrentUsername] = useCurrentUsername();
 
   useEffect(() => {
@@ -91,16 +91,16 @@ function App() {
               <React.Fragment>
                 <Navbar token={token} />
                 <Opportunities />
-                {/* <Search projects={projects} search={renderSearchProject} />
-              <div>
-                <ul className="projects-container">
-                  {searchedProjects && searchedProjects.length > 0 ? (
-                    searchedProjects.map((project) => renderProject(project)) // looping through project and rendering on the screen
-                  ) : (
-                    <p> No projects found </p>
-                  )}
-                </ul>
-              </div> */}
+
+                <div>
+                  <ul className="projects-container">
+                    {searchedProjects && searchedProjects.length > 0 ? (
+                      searchedProjects.map((project) => renderProject(project)) // looping through project and rendering on the screen
+                    ) : (
+                      <p> No projects found </p>
+                    )}
+                  </ul>
+                </div>
                 {/* <h1 className="projects-header">Opportunities</h1>
                 <div>
                   <ul className="projects-container">

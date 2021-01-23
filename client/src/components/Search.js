@@ -2,6 +2,7 @@ import React from "react";
 import "../stylesheets/Search.css";
 
 //Declaring a react component
+
 class Search extends React.Component {
   constructor(props) {
     super(props);
