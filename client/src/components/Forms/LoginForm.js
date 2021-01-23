@@ -51,7 +51,7 @@ function LoginForm({ setToken }) {
             onChange={(e) => setClientPassword(e.target.value)}
           />
         </label>
-        <input type="submit" value="Sign in" className="button" />
+        <input type="submit" value="Login" className="button" />
         <div className="sign-up-sentence">
           <p>Do not have an account?</p>
           <p className="sign-up-link">
