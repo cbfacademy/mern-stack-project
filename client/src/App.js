@@ -11,6 +11,7 @@ import LoginForm from "./components/Forms/LoginForm";
 import Search from "./components/Search";
 // import Form from "../src/components/Forms/Form";
 import Dashboard from "./pages/Dashboard";
+import ClientProjects from "./pages/ClientProjects";
 
 function App() {
   const [projects, setprojects] = useState(null);
@@ -59,8 +60,8 @@ function App() {
             <React.Fragment>
               <Navbar />
               <p className="tagline">
-                Find the <span className="tagline-span-1">opportunities</span>{" "}
-                and build up your <span className="tagline-span-2">CV</span>
+                Find <span className="tagline-span-1">opportunities</span> and
+                build up your <span className="tagline-span-2">CV</span>
               </p>
               <Search projects={projects} search={renderSearchProject} />
               <div>
@@ -121,6 +122,16 @@ function App() {
             <React.Fragment>
               <Navbar />
               <Dashboard />
+            </React.Fragment>
+          )}
+        />
+        <Route
+          exact
+          path="/clientprojects"
+          render={() => (
+            <React.Fragment>
+              <Navbar />
+              <ClientProjects />
             </React.Fragment>
           )}
         />

@@ -23,7 +23,9 @@ export default function Dashboard() {
           <p className="profile-paragraph">
             View, update and delete your projects
           </p>
-          <button className="profile-button">View Projects</button>
+          <Link to="/clientprojects">
+            <button className="profile-button">View Projects</button>
+          </Link>
         </div>
         <div className="dashboard-profile">
           <h2 className="profile-title">Project Form</h2>
