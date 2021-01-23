@@ -39,6 +39,13 @@ class Navbar extends React.Component {
   };
 
   render() {
+    const navbarItems = MenuItems.filter((item) => {
+      if (!this.props.token && item.label === "Dashboard") {
+        return false;
+      }
+      return true;
+    });
+
     return (
       <nav className="navbar-items">
         <Link to="/">
@@ -50,13 +57,15 @@ class Navbar extends React.Component {
           ></i>
         </div>
         <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
-          {MenuItems.map((items, index) => {
+          {navbarItems.map((items, index) => {
             return (
               <li key={index}>
-                {/* <Link to={items.url} className={items.cName}>{items.label}</Link> */}
-                <a className={items.cName} href={items.url}>
+                <Link to={items.url} className={items.cName}>
                   {items.label}
-                </a>
+                </Link>
+                {/* <a className={items.cName} href={items.url}>
+                  {items.label}
+                </a> */}
               </li>
             );
           })}

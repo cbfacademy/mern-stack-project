@@ -12,11 +12,17 @@ import Search from "./components/Search";
 // import Form from "../src/components/Forms/Form";
 import Dashboard from "./pages/Dashboard";
 import ClientProjects from "./pages/ClientProjects";
+import Opportunities from "./components/Opportunities";
 import Footer from "./components/Footer";
+// import useToken from "./components/useToken";
+// import useCurrentUsername from "./components/useCurrentUsername";
 
 function App() {
   const [projects, setprojects] = useState(null);
   const [searchedProjects, setsearchedProjects] = useState([]);
+  // const [token, setToken] = useToken();
+  const[token, setToken] = useState();
+  // const [currentUsername, setCurrentUsername] = useCurrentUsername();
 
   useEffect(() => {
     if (!projects) {
@@ -37,11 +43,11 @@ function App() {
           <h3 className="project-name">{`${project.project_name}`} </h3>
           <h4 className="client-name">{`${project.client_name}`}</h4>
           <h5 className="project-Location">{`${project.location.Region}, ${project.location.Country}`}</h5>
-          <p className="project-date">{`${project.date}`}</p>
+          {/* <p className="project-date">{`${project.date}`}</p> */}
         </div>
-        <div className="description-flex">
+        {/* <div className="description-flex">
           <p className="project-description">{`${project.project_description}`}</p>
-        </div>
+        </div> */}
       </li>
     );
   };
@@ -60,7 +66,7 @@ function App() {
             path="/"
             render={() => (
               <React.Fragment>
-                <Navbar />
+                <Navbar token={token} />
                 <p className="tagline">
                   Find <span className="tagline-span-1">opportunities</span> and
                   build up your <span className="tagline-span-2">CV</span>
@@ -83,7 +89,8 @@ function App() {
             path="/opportunities"
             render={() => (
               <React.Fragment>
-                <Navbar />
+                <Navbar token={token} />
+                <Opportunities />
                 {/* <Search projects={projects} search={renderSearchProject} />
               <div>
                 <ul className="projects-container">
@@ -94,7 +101,7 @@ function App() {
                   )}
                 </ul>
               </div> */}
-                <h1 className="projects-header">Opportunities</h1>
+                {/* <h1 className="projects-header">Opportunities</h1>
                 <div>
                   <ul className="projects-container">
                     {projects && projects.length > 0 ? (
@@ -103,7 +110,7 @@ function App() {
                       <p> No projects found </p>
                     )}
                   </ul>
-                </div>
+                </div> */}
               </React.Fragment>
             )}
           />
@@ -112,7 +119,7 @@ function App() {
             path="/about"
             render={() => (
               <React.Fragment>
-                <Navbar />
+                <Navbar token={token} />
                 <About />
               </React.Fragment>
             )}
@@ -122,8 +129,9 @@ function App() {
             path="/dashboard"
             render={() => (
               <React.Fragment>
-                <Navbar />
+                <Navbar token={token} />
                 <Dashboard />
+                {/* <Dashboard currentUsername={currentUsername} /> */}
               </React.Fragment>
             )}
           />
@@ -132,7 +140,7 @@ function App() {
             path="/clientprojects"
             render={() => (
               <React.Fragment>
-                <Navbar />
+                <Navbar token={token} />
                 <ClientProjects />
               </React.Fragment>
             )}
@@ -142,7 +150,7 @@ function App() {
             path="/projectform"
             render={() => (
               <React.Fragment>
-                <Navbar />
+                <Navbar token={token} />
                 <ProjectForm />
                 <Footer />
               </React.Fragment>
@@ -153,8 +161,11 @@ function App() {
             path="/login"
             render={() => (
               <React.Fragment>
-                <Navbar />
-                <LoginForm />
+                <Navbar token={token} />
+                <LoginForm
+                  setToken={setToken}
+                  // setCurrentUsername={setCurrentUsername}
+                />
               </React.Fragment>
             )}
           />
@@ -163,7 +174,7 @@ function App() {
             path="/signup"
             render={() => (
               <React.Fragment>
-                <Navbar />
+                <Navbar token={token} />
                 <SignUpForm />
               </React.Fragment>
             )}

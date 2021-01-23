@@ -1,20 +1,18 @@
-import React, { useState } from "react";
-// import React from "react";
+import React from "react";
 import "../stylesheets/Dashboard.css";
 import { Link } from "react-router-dom";
-import LoginForm from "../components/Forms/LoginForm";
+// import LoginForm from "../components/Forms/LoginForm";
 
 export default function Dashboard() {
-  const { token, setToken } = useState();
+  // THIS MAKES THE LOGIN PAGE THE FIRST THING ON THE WEBSIT
+  // if (!token) {
+  //   return <LoginForm setToken={setToken} />;
+  // }
 
-  //THIS MAKES THE LOGIN PAGE THE FIRST THING ON THE WEBSIT
-  if (!token) {
-    return <LoginForm setToken={setToken} />;
-  }
-
+  // console.log(this.props.currentUsername);
   return (
     <>
-      <h1 className="dashboard-title">Dashboard</h1>
+      <h1 className="dashboard-title">{/* {currentUsername}'s Dashboard */}</h1>
       <div className="flex-container">
         <div className="dashboard-profile">
           <h2 className="profile-title">Client Projects</h2>
