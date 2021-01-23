@@ -7,8 +7,17 @@
   font-family: "Montserrat", sans-serif;
 }
 
+/*FOR FOOTER FORMATTING */
+html,
 body {
-  position: relative;
+  height: 100%;
+  margin: 0;
+}
+
+/*FOR FOOTER FORMATTING */
+.content-wrap {
+  min-height: 100vh;
+  margin-bottom: -50px;
 }
 
 /* .projects-container {

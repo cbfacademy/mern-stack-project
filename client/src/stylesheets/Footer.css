@@ -1,15 +1,11 @@
 .footer {
-  position: fixed;
   height: 50px;
   background: linear-gradient(
     90deg,
     rgba(7, 104, 159, 1) 10%,
     rgb(162, 213, 242) 60%
   );
-  margin-bottom: 0;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  height: 50px;
   /* margin-bottom: 0px; */
 }
 
@@ -25,7 +21,7 @@
 
 .copyright {
   color: white;
-  margin-top: 15px;
+  padding-top: 15px;
   text-align: center;
   cursor: pointer;
   font-size: 15px;

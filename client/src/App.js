@@ -53,37 +53,38 @@ function App() {
   return (
     //32-41 telling the app what to do
     <>
-      <Router>
-        <Route
-          exact
-          path="/"
-          render={() => (
-            <React.Fragment>
-              <Navbar />
-              <p className="tagline">
-                Find <span className="tagline-span-1">opportunities</span> and
-                build up your <span className="tagline-span-2">CV</span>
-              </p>
-              <Search projects={projects} search={renderSearchProject} />
-              <div>
-                <ul className="projects-container">
-                  {searchedProjects && searchedProjects.length > 0 ? (
-                    searchedProjects.map((project) => renderProject(project)) // looping through project and rendering on the screen
-                  ) : (
-                    <p> No projects found </p>
-                  )}
-                </ul>
-              </div>
-            </React.Fragment>
-          )}
-        />
-        <Route
-          exact
-          path="/opportunities"
-          render={() => (
-            <React.Fragment>
-              <Navbar />
-              {/* <Search projects={projects} search={renderSearchProject} />
+      <div className="content-wrap">
+        <Router>
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <React.Fragment>
+                <Navbar />
+                <p className="tagline">
+                  Find <span className="tagline-span-1">opportunities</span> and
+                  build up your <span className="tagline-span-2">CV</span>
+                </p>
+                <Search projects={projects} search={renderSearchProject} />
+                <div>
+                  <ul className="projects-container">
+                    {searchedProjects && searchedProjects.length > 0 ? (
+                      searchedProjects.map((project) => renderProject(project)) // looping through project and rendering on the screen
+                    ) : (
+                      <p> No projects found </p>
+                    )}
+                  </ul>
+                </div>
+              </React.Fragment>
+            )}
+          />
+          <Route
+            exact
+            path="/opportunities"
+            render={() => (
+              <React.Fragment>
+                <Navbar />
+                {/* <Search projects={projects} search={renderSearchProject} />
               <div>
                 <ul className="projects-container">
                   {searchedProjects && searchedProjects.length > 0 ? (
@@ -93,87 +94,83 @@ function App() {
                   )}
                 </ul>
               </div> */}
-              <h1 className="projects-header">Opportunities</h1>
-              <div>
-                <ul className="projects-container">
-                  {projects && projects.length > 0 ? (
-                    projects.map((project) => renderProject(project)) // looping through project and rendering on the screen
-                  ) : (
-                    <p> No projects found </p>
-                  )}
-                </ul>
-              </div>
-              <Footer />
-            </React.Fragment>
-          )}
-        />
-        <Route
-          exact
-          path="/about"
-          render={() => (
-            <React.Fragment>
-              <Navbar />
-              <About />
-              <Footer />
-            </React.Fragment>
-          )}
-        />
-        <Route
-          exact
-          path="/dashboard"
-          render={() => (
-            <React.Fragment>
-              <Navbar />
-              <Dashboard />
-              <Footer />
-            </React.Fragment>
-          )}
-        />
-        <Route
-          exact
-          path="/clientprojects"
-          render={() => (
-            <React.Fragment>
-              <Navbar />
-              <ClientProjects />
-              <Footer />
-            </React.Fragment>
-          )}
-        />
-        <Route
-          exact
-          path="/projectform"
-          render={() => (
-            <React.Fragment>
-              <Navbar />
-              <ProjectForm />
-              <Footer />
-            </React.Fragment>
-          )}
-        />
-        <Route
-          exact
-          path="/login"
-          render={() => (
-            <React.Fragment>
-              <Navbar />
-              <LoginForm />
-              <Footer />
-            </React.Fragment>
-          )}
-        />
-        <Route
-          exact
-          path="/signup"
-          render={() => (
-            <React.Fragment>
-              <Navbar />
-              <SignUpForm />
-              <Footer />
-            </React.Fragment>
-          )}
-        />
-      </Router>
+                <h1 className="projects-header">Opportunities</h1>
+                <div>
+                  <ul className="projects-container">
+                    {projects && projects.length > 0 ? (
+                      projects.map((project) => renderProject(project)) // looping through project and rendering on the screen
+                    ) : (
+                      <p> No projects found </p>
+                    )}
+                  </ul>
+                </div>
+              </React.Fragment>
+            )}
+          />
+          <Route
+            exact
+            path="/about"
+            render={() => (
+              <React.Fragment>
+                <Navbar />
+                <About />
+              </React.Fragment>
+            )}
+          />
+          <Route
+            exact
+            path="/dashboard"
+            render={() => (
+              <React.Fragment>
+                <Navbar />
+                <Dashboard />
+              </React.Fragment>
+            )}
+          />
+          <Route
+            exact
+            path="/clientprojects"
+            render={() => (
+              <React.Fragment>
+                <Navbar />
+                <ClientProjects />
+              </React.Fragment>
+            )}
+          />
+          <Route
+            exact
+            path="/projectform"
+            render={() => (
+              <React.Fragment>
+                <Navbar />
+                <ProjectForm />
+                <Footer />
+              </React.Fragment>
+            )}
+          />
+          <Route
+            exact
+            path="/login"
+            render={() => (
+              <React.Fragment>
+                <Navbar />
+                <LoginForm />
+              </React.Fragment>
+            )}
+          />
+          <Route
+            exact
+            path="/signup"
+            render={() => (
+              <React.Fragment>
+                <Navbar />
+                <SignUpForm />
+              </React.Fragment>
+            )}
+          />
+        </Router>
+      </div>
+      <Footer />
     </>
   );
 }
