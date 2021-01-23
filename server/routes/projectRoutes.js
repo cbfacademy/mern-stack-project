@@ -1,6 +1,5 @@
-const mongoose = require('mongoose');
-const Project = mongoose.model('projects');
-
+const mongoose = require("mongoose");
+const Project = mongoose.model("projects");
 
 module.exports = (app) => {
   // Get's all the projects
@@ -17,9 +16,19 @@ module.exports = (app) => {
       myProject,
     });
   });
+
+// CHECK THIS!!!!
+
+  app.delete(`/api/project`, async (req, res) => {
+    const deleteProject = await Project.delete(req.body);
+    return res.status(202).send({
+      error: false,
+      deleteProject,
+    });
+  });
 };
 
 //Add method in here to delete, add a button that will delete a project, wire button to call function
-//Project service, project route and mongodb 
+//Project service, project route and mongodb
 
 // http://localhost:5000/api/project
