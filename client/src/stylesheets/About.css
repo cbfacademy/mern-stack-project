@@ -1,7 +1,7 @@
-/* .content-wrap {
-  min-height: 100vh;
+.content-wrap {
+  min-height: cal(100vh - 70px);
   margin-bottom: -50px;
-} */
+}
 
 .about-header {
   text-align: center;

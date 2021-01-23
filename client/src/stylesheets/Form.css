@@ -7,6 +7,7 @@
 .content-wrap {
   min-height: 100vh;
   margin-bottom: -50px;
+  padding-bottom: 20px;
 }
 
 .formTitle {
@@ -17,7 +18,8 @@
 }
 
 .formContainer {
-  width: 50%;
+  width: 400px;
+  min-width: 400px;
   margin: 0 auto;
 }
 
@@ -30,10 +32,13 @@
 
 input {
   width: 100%;
+  /* min-width: 250px;
+  max-width: 300px; */
   height: 30px;
   font-size: 14px;
   padding-left: 6px;
   border: 0.5px solid grey;
+  margin: 0 auto;
 }
 
 .button {
@@ -76,6 +81,7 @@ input {
 .login-link {
   margin-left: 5px;
   margin-top: 5px;
+  margin-bottom: 100px;
   font-weight: bold;
 }
 
