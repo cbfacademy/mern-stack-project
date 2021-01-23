@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Question from "./Question";
 import questionService from "../services/questionService";
 
-function App() {
+function Questionnaire() {
     const [question, setquestion] = useState(null);
   
     useEffect(() => {
@@ -18,10 +18,15 @@ function App() {
 
     return (
       <div className= "Questionnaire">
-          <Question />
+          <Question question={question}/>
       </div>
+
+  
   );
+
+  
+
 }
   
     
-     export default App;
+     export default Questionnaire;

@@ -1,0 +1,6 @@
+.btn {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 4px;
+}

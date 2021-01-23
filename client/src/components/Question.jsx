@@ -1,20 +1,16 @@
-import React, { useState, useEffect } from "react";
-import questionService from "../services/questionService";
+import React, { useState } from "react";
+import Button from "@material-ui/core/Button"
+import "./Question.css";
 
-function App() {
+
+  function Question ({question}) {
   const [showAnswer, setShowAnswer] = useState([false, 1]);
-  const [question, setquestion] = useState(null);
-  
-    useEffect(() => {
-      if (!question) {
-        getquestions();
-      }
-    });
 
-    const getquestions = async () => {
-      let res = await questionService.getAll();
-      setquestion(res);
-    };
+
+
+
+    
+   
 
   function handleClick(target) {
     console.log(target)
@@ -48,7 +44,19 @@ const renderStatement = (statement) => {
             {`${question.questionText}`}
           </h3>
           {question.options.map((option)=>(
-            <button onClick={() => handleClick(option.Target)}>{option.Text}</button>
+            <Button
+            size="medium"
+            style={{
+              fontSize: 16,
+              borderRadius: 2,
+              width: '50%',
+              margin: 5,
+            }}
+            onClick={() => handleClick(option.Target)} 
+            variant="outlined" 
+            color="primary"
+            >{option.Text}
+            </Button>
           ))}
         </text>
   
@@ -72,16 +80,25 @@ const renderStatement = (statement) => {
             if(question.id === showAnswer[1]){
               return renderStatement(question)
             }
+            return null
       
       }) :(<p>Please choose an entity type</p>)}
-  
+       
+      
   
         </ul>
+
+      <div className= "Question">
+          <questionService />
+      </div>
       </div>
     );
 
     
+
+
+    
   }
   
-  export default App;
+  export default Question;
   

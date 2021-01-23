@@ -1,5 +1,9 @@
-.App {
+/*.App {
   Text-align: center;
+}
+*/
+ul {
+  display: grid;
 }
 
 .App-logo {
@@ -37,7 +41,8 @@
   }
 }
 
-button {
+/*
+Button {
   display: grid;
   grid-column-start: 2;
-}
+}*/

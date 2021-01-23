@@ -1,27 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
 import Questionnaire from "./components/Questionnaire";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+/*import Header from "./components/Header";
+import Footer from "./components/Footer";*/
+
 
 //SERVICES Question
-import questionService from "./services/questionService";
 
 function App() {
-  const [question, setquestion] = useState(null);
-  const [showAnswer, setShowAnswer] = useState([false, 1]);
-
-  useEffect(() => {
-    if (!question) {
-      getquestions();
-    }
-  });
-
-  const getquestions = async () => {
-    let res = await questionService.getAll();
-    setquestion(res);
-  };
-
+  
+/*
 function handleClick(target) {
   console.log(target)
   setShowAnswer([true,target])
@@ -63,9 +51,10 @@ const renderStatement = (statement) => {
         )
       }
   };
+  */
 
 
-  return (
+/* return (
     <div>
       <ul>
         {question && question.length > 0 ? (
@@ -87,12 +76,10 @@ const renderStatement = (statement) => {
       </ul>
     </div>
   );
-
+*/
   return (
     <div className= "App">
-        <Header />
         <Questionnaire />
-        <Footer />
     </div>
 );
 
