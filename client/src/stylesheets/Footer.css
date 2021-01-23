@@ -1,0 +1,33 @@
+.footer {
+  position: fixed;
+  height: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 104, 159, 1) 10%,
+    rgb(162, 213, 242) 60%
+  );
+  margin-bottom: 0;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  /* margin-bottom: 0px; */
+}
+
+/* .footer-logo {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Damion", cursive;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: 500;
+} */
+
+.copyright {
+  color: white;
+  margin-top: 15px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+}

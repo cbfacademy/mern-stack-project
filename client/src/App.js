@@ -12,6 +12,7 @@ import Search from "./components/Search";
 // import Form from "../src/components/Forms/Form";
 import Dashboard from "./pages/Dashboard";
 import ClientProjects from "./pages/ClientProjects";
+import Footer from "./components/Footer";
 
 function App() {
   const [projects, setprojects] = useState(null);
@@ -102,6 +103,7 @@ function App() {
                   )}
                 </ul>
               </div>
+              <Footer />
             </React.Fragment>
           )}
         />
@@ -112,6 +114,7 @@ function App() {
             <React.Fragment>
               <Navbar />
               <About />
+              <Footer />
             </React.Fragment>
           )}
         />
@@ -122,6 +125,7 @@ function App() {
             <React.Fragment>
               <Navbar />
               <Dashboard />
+              <Footer />
             </React.Fragment>
           )}
         />
@@ -132,6 +136,7 @@ function App() {
             <React.Fragment>
               <Navbar />
               <ClientProjects />
+              <Footer />
             </React.Fragment>
           )}
         />
@@ -142,6 +147,7 @@ function App() {
             <React.Fragment>
               <Navbar />
               <ProjectForm />
+              <Footer />
             </React.Fragment>
           )}
         />
@@ -152,6 +158,7 @@ function App() {
             <React.Fragment>
               <Navbar />
               <LoginForm />
+              <Footer />
             </React.Fragment>
           )}
         />
@@ -162,6 +169,7 @@ function App() {
             <React.Fragment>
               <Navbar />
               <SignUpForm />
+              <Footer />
             </React.Fragment>
           )}
         />
