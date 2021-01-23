@@ -36,61 +36,63 @@ function ProjectForm() {
 
   return (
     <>
-      <React.Fragment>
-        <h2 className="formTitle">Project Form</h2>
-      </React.Fragment>
-      <form onSubmit={handleSubmit} className="formContainer">
-        <label>
-          <div className="label">Client Name:</div>
-          <input
-            type="text"
-            value={ClientName}
-            onChange={(e) => setClientName(e.target.value)}
-          />
-        </label>
-        <label>
-          <div className="label">Project Name:</div>
-          <input
-            type="text"
-            value={ProjectName}
-            onChange={(e) => setProjectName(e.target.value)}
-          />
-        </label>
-        <label>
-          <div className="label">Project Description:</div>
-          <input
-            type="textarea"
-            value={ProjectDescription}
-            onChange={(e) => setProjectDescription(e.target.value)}
-            rows={5}
-            cols={5}
-          />
-        </label>
-        <label>
-          <div className="label">Location:</div>
-          <CountryDropdown
-            value={Country}
-            onChange={(val) => setCountry(val)}
-            className="countryDropdown"
-          />
-          <RegionDropdown
-            country={Country}
-            value={Region}
-            onChange={(val) => setRegion(val)}
-            className="regionDropdown"
-          />
-        </label>
-        <label>
-          <div className="label">Application Deadline:</div>
-          <input
-            type="date"
-            value={Date}
-            onChange={(e) => setDate(e.target.value)}
-          />
-        </label>
+      <div className="content-wrap">
+        <React.Fragment>
+          <h2 className="formTitle">Project Form</h2>
+        </React.Fragment>
+        <form onSubmit={handleSubmit} className="formContainer">
+          <label>
+            <div className="label">Client Name:</div>
+            <input
+              type="text"
+              value={ClientName}
+              onChange={(e) => setClientName(e.target.value)}
+            />
+          </label>
+          <label>
+            <div className="label">Project Name:</div>
+            <input
+              type="text"
+              value={ProjectName}
+              onChange={(e) => setProjectName(e.target.value)}
+            />
+          </label>
+          <label>
+            <div className="label">Project Description:</div>
+            <input
+              type="textarea"
+              value={ProjectDescription}
+              onChange={(e) => setProjectDescription(e.target.value)}
+              rows={5}
+              cols={5}
+            />
+          </label>
+          <label>
+            <div className="label">Location:</div>
+            <CountryDropdown
+              value={Country}
+              onChange={(val) => setCountry(val)}
+              className="countryDropdown"
+            />
+            <RegionDropdown
+              country={Country}
+              value={Region}
+              onChange={(val) => setRegion(val)}
+              className="regionDropdown"
+            />
+          </label>
+          <label>
+            <div className="label">Application Deadline:</div>
+            <input
+              type="date"
+              value={Date}
+              onChange={(e) => setDate(e.target.value)}
+            />
+          </label>
 
-        <input type="submit" value="Submit" className="button" />
-      </form>
+          <input type="submit" value="Submit" className="button" />
+        </form>
+      </div>
     </>
   );
 }

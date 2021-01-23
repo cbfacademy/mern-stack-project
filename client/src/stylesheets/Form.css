@@ -4,6 +4,11 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.content-wrap {
+  min-height: 100vh;
+  margin-bottom: -50px;
+}
+
 .formTitle {
   text-align: center;
   font-size: 40px;

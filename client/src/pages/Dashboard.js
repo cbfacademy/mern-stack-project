@@ -14,9 +14,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <div>
-        <h1 className="dashboard-title">Dashboard</h1>
-      </div>
+      <h1 className="dashboard-title">Dashboard</h1>
       <div className="flex-container">
         <div className="dashboard-profile">
           <h2 className="profile-title">Client Projects</h2>

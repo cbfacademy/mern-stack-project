@@ -33,66 +33,68 @@ function SignUpForm() {
 
   return (
     <>
-      <React.Fragment>
-        <h2 className="formTitle">Create a New Account</h2>
-      </React.Fragment>
-      <form onSubmit={handleSubmit} className="formContainer">
-        <label>
-          <div className="label">First Name:</div>
-          <input
-            type="text"
-            value={ClientFirstName}
-            onChange={(e) => setClientFirstName(e.target.value)}
-          />
-        </label>
-        <label>
-          <div className="label">Last Name:</div>
-          <input
-            type="text"
-            value={ClientLastName}
-            onChange={(e) => setClientLastName(e.target.value)}
-          />
-        </label>
-        <label>
-          <div className="label">Company Name:</div>
-          <input
-            type="textarea"
-            value={CompanyName}
-            onChange={(e) => setCompanyName(e.target.value)}
-          />
-        </label>
-        <label>
-          <div className="label">Email</div>
-          <input
-            type="text"
-            value={ClientEmail}
-            onChange={(e) => setClientEmail(e.target.value)}
-          />
-        </label>
-        <label>
-          <div className="label">Username:</div>
-          <input
-            type="text"
-            value={ClientUsername}
-            onChange={(e) => setClientUsername(e.target.value)}
-          />
-        </label>
-        <label>
-          <div className="label">Password:</div>
-          <input
-            type="text"
-            value={ClientPassword}
-            onChange={(e) => setClientPassword(e.target.value)}
-          />
-        </label>
-        <input type="submit" value="Sign up" className="button" />
-        <div className="login-sentence">
-          <p>Already have an account?</p>
-          <p className="login-link">
-            <Link to="/login">Login here</Link>
-          </p>
-        </div>
-      </form>
+      <div className="content-wrap">
+        <React.Fragment>
+          <h2 className="formTitle">Create a New Account</h2>
+        </React.Fragment>
+        <form onSubmit={handleSubmit} className="formContainer">
+          <label>
+            <div className="label">First Name:</div>
+            <input
+              type="text"
+              value={ClientFirstName}
+              onChange={(e) => setClientFirstName(e.target.value)}
+            />
+          </label>
+          <label>
+            <div className="label">Last Name:</div>
+            <input
+              type="text"
+              value={ClientLastName}
+              onChange={(e) => setClientLastName(e.target.value)}
+            />
+          </label>
+          <label>
+            <div className="label">Company Name:</div>
+            <input
+              type="textarea"
+              value={CompanyName}
+              onChange={(e) => setCompanyName(e.target.value)}
+            />
+          </label>
+          <label>
+            <div className="label">Email</div>
+            <input
+              type="text"
+              value={ClientEmail}
+              onChange={(e) => setClientEmail(e.target.value)}
+            />
+          </label>
+          <label>
+            <div className="label">Username:</div>
+            <input
+              type="text"
+              value={ClientUsername}
+              onChange={(e) => setClientUsername(e.target.value)}
+            />
+          </label>
+          <label>
+            <div className="label">Password:</div>
+            <input
+              type="text"
+              value={ClientPassword}
+              onChange={(e) => setClientPassword(e.target.value)}
+            />
+          </label>
+          <input type="submit" value="Sign up" className="button" />
+          <div className="login-sentence">
+            <p>Already have an account?</p>
+            <p className="login-link">
+              <Link to="/login">Login here</Link>
+            </p>
+          </div>
+        </form>
+      </div>
     </>
   );
 }
