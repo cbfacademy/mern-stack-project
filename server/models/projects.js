@@ -10,6 +10,10 @@ const projectSchema = new Schema({
   date: String,
   contact_information: String,
   skills: Array,
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: "Client",
+  },
 });
 
 mongoose.model("projects", projectSchema);

@@ -10,7 +10,12 @@ export default {
   },
 
   //Pass in newProject in the parameter to link it to the information in the Project Form
-  createProject: async (newClient) => {
-    await axios.post(`/api/project`, newClient);
+  createProject: async (newProject) => {
+    await axios.post(`/api/project`, newProject);
   },
+
+  
 };
+
+
+// Why is it NewClient???

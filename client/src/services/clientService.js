@@ -14,6 +14,8 @@ export default {
     await axios.post(`/api/client`, newClient);
   },
 
+  
+
   // loginUser: async (credentials) => {
   //   await axios.post(`/api/login`, credentials);
   // },

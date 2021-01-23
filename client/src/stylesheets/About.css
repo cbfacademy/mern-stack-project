@@ -40,3 +40,13 @@
   border-left-style: none;
   border: 1.5px solid #ff7e67;
 }
+
+.sentence {
+  margin-bottom: 20px;
+  padding: 0 30px;
+}
+
+span {
+  color: #07689f;
+  font-weight: bold;
+}

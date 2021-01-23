@@ -11,23 +11,27 @@ async function loginUser(credentials) {
   return fetch("http://localhost:5000/api/login", {
     method: "POST",
     headers: {
-      "Content-Type": "client/json",
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(credentials),
   }).then((data) => data.json());
 }
-
+//Add setCurrentUsername as a property in Login form
 function LoginForm({ setToken }) {
-  const [ClientUsername, setClientUsername] = useState("");
-  const [ClientPassword, setClientPassword] = useState("");
+  const [clientUsername, setClientUsername] = useState();
+  const [clientPassword, setClientPassword] = useState();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const token = await loginUser({
-      ClientUsername,
-      ClientPassword,
+      clientUsername,
+      clientPassword,
     });
     setToken(token);
+    // setCurrentUsername({ currentUsername: clientUsername });
+
+    // clientService.loginUser(credientials);
+    // e.preventDefault();
   };
 
   return (
@@ -40,7 +44,7 @@ function LoginForm({ setToken }) {
           <div className="label">Username:</div>
           <input
             type="text"
-            value={ClientUsername}
+            value={clientUsername}
             onChange={(e) => setClientUsername(e.target.value)}
           />
         </label>
@@ -48,7 +52,7 @@ function LoginForm({ setToken }) {
           <div className="label">Password:</div>
           <input
             type="password"
-            value={ClientPassword}
+            value={clientPassword}
             onChange={(e) => setClientPassword(e.target.value)}
           />
         </label>
@@ -65,6 +69,7 @@ function LoginForm({ setToken }) {
 }
 LoginForm.propTypes = {
   setToken: PropTypes.func.isRequired,
+  // setCurrentUsername: PropTypes.func.isRequired,
 };
 
 // //CLASS COMPONENTS

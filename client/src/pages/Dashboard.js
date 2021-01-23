@@ -1,10 +1,11 @@
-import React from "react";
+import React from "react"; //TEST
 import "../stylesheets/Dashboard.css";
 import { Link } from "react-router-dom";
-// import LoginForm from "../components/Forms/LoginForm";
+// import LoginForm from "../components/Forms/LoginForm"; //TEST
 
 export default function Dashboard() {
-  // THIS MAKES THE LOGIN PAGE THE FIRST THING ON THE WEBSIT
+  // const [token, setToken] = useState(); //TEST
+  // // THIS MAKES THE LOGIN PAGE THE FIRST THING ON THE WEBSIT
   // if (!token) {
   //   return <LoginForm setToken={setToken} />;
   // }
@@ -12,7 +13,8 @@ export default function Dashboard() {
   // console.log(this.props.currentUsername);
   return (
     <>
-      <h1 className="dashboard-title">{/* {currentUsername}'s Dashboard */}</h1>
+      {/* add in header{currentUsername} */}
+      <h1 className="dashboard-title">Dashboard</h1>
       <div className="flex-container">
         <div className="dashboard-profile">
           <h2 className="profile-title">Client Projects</h2>

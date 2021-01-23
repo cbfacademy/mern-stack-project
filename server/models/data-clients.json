@@ -4,18 +4,22 @@
         "first_name": "admin",
         "last_name": "admin",
         "company_name": "admin",
+        "company_logo": "",
         "email": "admin1@admin.com",
         "username": "admin",
         "password": "admin1"
+        
     },
     {
         "client_id": 2,
         "first_name": "admin",
         "last_name": "admin",
         "company_name": "admin",
+        "company_logo": "",
         "email": "admin2@admin.com",
         "username": "admin",
-        "password": "admin2"
+        "password": "admin2",
+        "img": ""
     }
 ]
 

@@ -65,11 +65,11 @@ body {
   max-width: 40%;
 }
 
-.project-description {
+/* .project-description {
   display: flex;
   flex-direction: column;
   flex: auto;
-}
+} */
 
 .tagline {
   text-align: center;

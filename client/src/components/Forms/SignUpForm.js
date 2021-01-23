@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import clientService from "../../services/clientService";
 import "../../stylesheets/Form.css";
 import { Link } from "react-router-dom";
+// import FileUploader from "../FileUploader";
 
 //FIELDS DO NOT CLEAR AFTER SUBMISSION
 
@@ -9,9 +10,19 @@ function SignUpForm() {
   const [ClientFirstName, setClientFirstName] = useState("");
   const [ClientLastName, setClientLastName] = useState("");
   const [CompanyName, setCompanyName] = useState("");
+  const [CompanyLogo, setCompanyLogo] = useState("");
   const [ClientEmail, setClientEmail] = useState("");
   const [ClientUsername, setClientUsername] = useState("");
   const [ClientPassword, setClientPassword] = useState("");
+  const fileInput = useRef(null);
+
+  const handleFileInput = (e) => {
+    // handle validations - NEED TO DEFINE!!!!
+    setCompanyLogo(e.target.value);
+  };
+  // if (fileInput.size > 1024) {
+  //   onFileSelectError({ error: "File size cannot exceed more than 1MB" });
+  // } else onFileSelectSuccess(file);
 
   const handleSubmit = async (e) => {
     alert("Your sign up is complete!");
@@ -21,6 +32,7 @@ function SignUpForm() {
       first_name: ClientFirstName,
       last_name: ClientLastName,
       company_name: CompanyName,
+      company_logo: CompanyLogo,
       email: ClientEmail,
       username: ClientUsername,
       password: ClientPassword,
@@ -61,6 +73,28 @@ function SignUpForm() {
               value={CompanyName}
               onChange={(e) => setCompanyName(e.target.value)}
             />
+          </label>
+          {/* COMPANY LOGO UPLOADER */}
+          <label>
+            <div className="label">Company Logo:</div>
+            {/* <input
+              type="file"
+              value={CompanyLogo}
+              onChange={(e) => setCompanyLogo(e.target.value)}
+              className="company-log-btn"
+            /> */}
+
+            <input
+              id="file"
+              type="file"
+              value={CompanyLogo}
+              onChange={handleFileInput}
+              className="logo-upload"
+            ></input>
+            {/* <button
+              onClick={(e) => fileInput.current && fileInput.current.click(e)}
+              className="logo-upload-btn"
+            ></button> */}
           </label>
           <label>
             <div className="label">Email</div>

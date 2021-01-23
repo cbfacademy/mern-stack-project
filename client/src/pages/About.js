@@ -7,9 +7,26 @@ function About() {
     <React.Fragment>
       <div className="about-container">
         <h1 className="about-header">About Us</h1>
-        <p className="about-paragraph">
-          Welcome to Experience. This website is...{" "}
-        </p>
+        <div className="about-paragraph">
+          {/* <h2>Welcome to Experience.</h2> */}
+
+          <p className="sentence">
+            Have you ever applied for a job and got told that you do not have
+            enough experience?
+          </p>
+          <p className="sentence">
+            What about wanting to use your skills in a different field and not
+            knowing how?
+          </p>
+          <p className="sentence">
+            <span>That is where we come in!</span>
+          </p>
+          <p className="sentence">
+            Experience was created to help people, like yourself, find
+            opportunities to develop skills, explore industries and improve
+            employability.
+          </p>
+        </div>
         <Link to="/">
           <button className="about-button">Search Opportunities</button>
         </Link>
