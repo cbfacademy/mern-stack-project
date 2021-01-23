@@ -25,6 +25,11 @@ const MenuItems = [
     cName: "nav-links",
   },
   {
+    label: "Logout",
+    url: "/login",
+    cName: "nav-links",
+  },
+  {
     label: "Become a Client",
     url: "/signup",
     cName: "nav-links-mobile",
@@ -45,6 +50,13 @@ class Navbar extends React.Component {
       }
       return true;
     });
+
+    // const loginLogout = MenuItems.filter((item) => {
+    //   if (!this.props.token && item.label === "Logout") {
+    //   return false;
+    //   }
+    //   return true;
+    // });
 
     return (
       <nav className="navbar-items">
