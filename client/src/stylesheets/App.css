@@ -28,9 +28,13 @@ body {
 .projects-container {
   margin: 20px 30px 90px;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: auto;
   list-style: none;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  /* justify-content: center;
+  align-content: center; */
+  /* grid-column-gap: 6px;
+  grid-row-gap:6px; */
 }
 
 .project-profile {
