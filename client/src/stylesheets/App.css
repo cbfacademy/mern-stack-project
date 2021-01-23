@@ -27,7 +27,7 @@ body {
 } */
 
 .projects-container {
-  margin: 20px 30px;
+  margin: 20px 30px 80px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: auto;
