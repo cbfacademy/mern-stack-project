@@ -1,6 +1,6 @@
 import React from "react";
 // import { MenuItems } from "./MenuItems";
-import "../../stylesheets/Navbar.css";
+import "../stylesheets/Navbar.css";
 import { Link } from "react-router-dom";
 
 const MenuItems = [

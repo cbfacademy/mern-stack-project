@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // import Header from "../src/components/Header";
 import projectService from "./services/projectService";
 import About from "./pages/About";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Navbar";
 import ProjectForm from "./components/Forms/ProjectForm";
 import "./stylesheets/App.css";
 import SignUpForm from "./components/Forms/SignUpForm";
@@ -170,6 +170,7 @@ function App() {
           />
         </Router>
       </div>
+
       <Footer />
     </>
   );

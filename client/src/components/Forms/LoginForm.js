@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 //Declaring a react component
 
+// UPDATE AND ADD THIS TO CLIENT SERVIC
 async function loginUser(credentials) {
   return fetch("http://localhost:5000/api/login", {
     method: "POST",
