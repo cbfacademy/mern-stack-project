@@ -2,6 +2,11 @@
   Text-align: center;
 }
 */
+
+.App {
+  Text-align:center;
+}
+
 ul {
   display: grid;
 }

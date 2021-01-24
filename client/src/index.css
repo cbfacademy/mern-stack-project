@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Poppins&family=Rubik:wght@400;500;600;700&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,6 +7,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #DDEBFC;
+  font-family:"Rubik";
+
+}
+
+h3 {
+  color:#3A4C84;
+  font-weight: 600;
+
+}
+
+Button {
+  color: #3A4C84;
 }
 
 code {
