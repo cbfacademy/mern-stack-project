@@ -19,13 +19,14 @@ function About() {
             knowing how?
           </p>
           <p className="sentence">
-            <span>That is where we come in!</span>
+            <span>This website is for you.</span>
           </p>
           <p className="sentence">
             Experience was created to help people, like yourself, find
             opportunities to develop skills, explore industries and improve
             employability.
           </p>
+          <p className="sentence"></p>
         </div>
         <Link to="/">
           <button className="about-button">Search Opportunities</button>

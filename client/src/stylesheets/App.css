@@ -71,10 +71,10 @@ body {
 }
 
 .project-profile:hover {
-  cursor: pointer;
+  /* cursor: pointer; */
   width: 370px;
   height: 230px;
-  box-shadow: 0px 0px 12px -2px #07689f;
+  /* box-shadow: 0px 0px 12px -2px #07689f; */
 }
 
 .project-name {
@@ -142,13 +142,13 @@ body {
   border-radius: 8px;
   background-color: #ff7e67;
   color: white;
-  height: 40px;
-  width: 25%;
+  height: 30px;
+  width: 20%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
   border-style: none;
   cursor: pointer;
   padding: 5px;

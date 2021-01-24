@@ -22,6 +22,13 @@
   height: 220px;
   overflow-wrap: normal;
   box-shadow: 0px 0px 12px -5px;
+  transition: 0.3s;
+}
+
+.dashboard-profile:hover {
+  /* cursor: pointer; */
+  width: 420px;
+  height: 240px;
 }
 
 .profile-title {
@@ -34,7 +41,7 @@
 } */
 
 .profile-paragraph {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
 }
 

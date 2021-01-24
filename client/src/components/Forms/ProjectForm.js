@@ -4,15 +4,31 @@ import "../../stylesheets/Form.css";
 // import Header from "../src/components/Header";
 import { CountryDropdown, RegionDropdown } from "react-country-region-selector";
 
+
 //REACT HOOKS
 
-function ProjectForm() {
+function ProjectForm(props) {
   const [ClientName, setClientName] = useState("");
   const [ProjectName, setProjectName] = useState("");
   const [ProjectDescription, setProjectDescription] = useState("");
   const [Country, setCountry] = useState("");
+  // const [SkillsRequired, setSkillsRequired] = useState("");
   const [Region, setRegion] = useState("");
   const [Date, setDate] = useState("");
+  const selectedTags = (tags) => console.log(tags);
+  // const [tags, setTags] = useState([]);
+
+  // const addTags = (e) => {
+  //   if (e.key === "Enter" && e.target.value !== "") {
+  //     setTags([...tags, e.target.value]);
+  //     props.selectedTags([...tags, e.target.value]);
+  //     e.target.value = "";
+  //   }
+  // };
+
+  // const removeTags = (index) => {
+  //   setTags([...tags.filter((tag) => tags.indexOf(tag) !== index)]);
+  // };
 
   const handleSubmit = async (e) => {
     alert("A profile was submitted: " + ClientName + " - " + ProjectName);
@@ -26,7 +42,7 @@ function ProjectForm() {
       location: { Country: Country, Region: Region },
       date: Date,
       contact_information: "",
-      skills: ["html", "json", "javascript"],
+      skills: selectedTags,
     };
 
     //create the actual project
@@ -40,7 +56,18 @@ function ProjectForm() {
         <React.Fragment>
           <h2 className="formTitle">Project Form</h2>
         </React.Fragment>
-        <form onSubmit={handleSubmit} className="formContainer">
+        <form
+          onSubmit={
+            (handleSubmit,
+            (e) => {
+              e.target.keyCode === 13 && e.preventDefault();
+            })
+          }
+          // onKeyPress={(e) => {
+          //   e.target.keyCode === 13 && e.preventDefault();
+          // }}
+          className="formContainer"
+        >
           <label>
             <div className="label">Client Name:</div>
             <input
@@ -68,6 +95,35 @@ function ProjectForm() {
             />
           </label>
           <label>
+            <div className="label">Skills Required:</div>
+            {/* <input
+              type="textarea"
+              value={SkillsRequired}
+              onChange={(e) => setSkillsRequired(e)}
+            /> */}
+            {/* <div className="tags-input">
+              <ul>
+                {tags.map((tag, index) => (
+                  <li key={index}>
+                    <span>{tag}</span>
+                    <i
+                      className="material-icons"
+                      onClick={() => removeTags(index)}
+                    >
+                      close
+                    </i>
+                  </li>
+                ))}
+              </ul>
+              <input
+                type="text"
+                onKeyUp={(e) => addTags(e)}
+                placeholder="Press enter to add tags"
+              />
+            </div> */}
+            {/* <TagInput selectedTags={selectedTags} /> */}
+          </label>
+          <label>
             <div className="label">Location:</div>
             <CountryDropdown
               value={Country}
@@ -90,7 +146,14 @@ function ProjectForm() {
             />
           </label>
 
-          <input type="submit" value="Submit" className="button" />
+          <input
+            onKeyPress={(e) => {
+              if (e.key === "Enter") e.preventDefault();
+            }}
+            type="submit"
+            value="Submit"
+            className="button"
+          />
         </form>
       </div>
     </>

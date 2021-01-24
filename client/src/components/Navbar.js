@@ -24,11 +24,11 @@ const MenuItems = [
     url: "/login",
     cName: "nav-links",
   },
-  {
-    label: "Logout",
-    url: "/login",
-    cName: "nav-links",
-  },
+  // {
+  //   label: "Logout",
+  //   url: "/login",
+  //   cName: "nav-links",
+  // },
   {
     label: "Become a Client",
     url: "/signup",

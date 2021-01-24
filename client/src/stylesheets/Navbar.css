@@ -21,6 +21,12 @@
   cursor: pointer;
   font-size: 55px;
   font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-logo:hover {
+  /* font-size: 57px; */
+  color: #ff7e67;
 }
 
 .nav-menu {
