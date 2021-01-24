@@ -1,0 +1,17 @@
+.content-wrap {
+  min-height: cal(100vh - 70px);
+  margin-bottom: -50px;
+}
+
+.profile-header {
+  text-align: center;
+  color: #ff7e67;
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+.profile-paragraph {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 30px;
+}
