@@ -9,10 +9,10 @@ import "./Question.css";
 
 function Question(props) {
   const [showAnswer, setShowAnswer] = useState([false, 1]);
+  //const [question, setquestion] = useState(null);
   let question = props.parentCallback(1);
-  //question,setQuestion
-  //if (!question){
-  //setQuestion.propsparentCallback}
+ // if (!question){
+  //setquestion.propsparentCallback}
   
 
   function handleClick(target) {
@@ -79,7 +79,7 @@ function Question(props) {
           >
             <Grid item>
               <Paper>
-                <Box width={600} height={600} textAlign="center" p={3}>
+                <Box width={500} height={500} margin={8} textAlign="center" p={3}>
                   <h3>{`${question.questionText}`}</h3>
                   {question.options.map((option) => (
                     <Button
