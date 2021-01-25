@@ -7,7 +7,8 @@
       { "Text": "American Express", "Target": 14 },
       { "Text": "Approbation", "Target": 15 },
       { "Text": "Documents", "Target": 2 },
-      { "Text": "Registry of Germany", "Target": 16 }
+      { "Text": "Registry of Germany", "Target": 16 },
+      { "Text": "Useful links", "Target": 17 }
     ]
   },
 
@@ -212,6 +213,16 @@
       "2. Download the receipts",
       "3. Attach receipts to a new E-mail",
       "4. Send the attachments to rechnungspruefung-fdd@firstdata.de"
+    ]
+  },
+  {
+    "id": 17,
+    "questionText": "The following links are useful:",
+    "type": "statement",
+    "Text": [
+      "1. Search doctors and therapists in Germany: https://www.kbv.de/html/arztsuche.php",
+      "2. Search dentists in Germany: https://www.kbv.de/html/arztsuche.php",
+      "3. Search listed public companies: http://www.finanztreff.de/kurse/suche/"
     ]
   }
 ]

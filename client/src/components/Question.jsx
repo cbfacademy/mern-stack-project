@@ -79,7 +79,7 @@ function Question(props) {
             alignItems="center"
           >
             <Grid item>
-              <Paper>
+              <Paper backgroundColor="#8490B3">
                 <Box width={500} height={500} margin={8} textAlign="center" p={3}>
                   <h3>{`${question.questionText}`}</h3>
                   {question.options.map((option) => (
@@ -87,14 +87,16 @@ function Question(props) {
                      // className={{ containedPrimary: classes.primary}}
                       size="small"
                       style={{
+                        fontFamily: "Rubik",
                         fontSize: 16,
                         borderRadius: 2,
                         width: "70%",
-                        margin: 5,
+                        margin: 10,
                         justifyContent: "left",
                       }}
                       onClick={() => handleClick(option.Target)}
                       variant="outlined"
+                      fontFamily="Rubik"
                       color="primary"
                     >
                       {option.Text}
