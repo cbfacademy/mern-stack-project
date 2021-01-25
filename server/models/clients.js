@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
+const bcrypt = require("bcrypt");
 
 const clientSchema = new Schema({
   client_id: Number,
@@ -16,19 +17,34 @@ const clientSchema = new Schema({
   email: {
     type: String,
     required: true,
+    unique: true,
   },
   username: {
     type: String,
     required: true,
+    unique: true,
   },
   password: {
     type: String,
     required: true,
   },
-
-  // projects: {
-  //   type: Schema.Types.ObjectId,
-  //   ref: "projects" },
 });
 
-mongoose.model("clients", clientSchema);
+clientSchema.pre("save", function (next) {
+  // Check to see if document is new or a new password has been set
+  if (this.isNew || this.isModified("password")) {
+    // Saving reference to this because of changing scopes
+    const document = this;
+    bcrypt.hash(document.password, saltRounds, function (err, hashedPassword) {
+      if (err) {
+        next(err);
+      } else {
+        document.password = hashedPassword;
+      }
+    });
+  } else {
+    next();
+  }
+});
+
+module.exports = mongoose.model("clients", clientSchema);
