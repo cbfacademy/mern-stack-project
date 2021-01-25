@@ -47,22 +47,7 @@ function Question(props) {
           direction="row"
           justify="space-between"
           alignItems="center"
-          spacing={2}
-        >
-          <Grid item xs={2}>
-            <Paper>
-              <Box width={5} height={50}>
-                Previous
-              </Box>
-            </Paper>
-          </Grid>
-          <Grid item xs={2}>
-            <Paper>
-              <Box width={5} height={50}>
-                Start
-              </Box>
-            </Paper>
-          </Grid>
+          spacing={2}>
         </Grid>
       </div>
     );
@@ -79,7 +64,7 @@ function Question(props) {
             alignItems="center"
           >
             <Grid item>
-              <Paper backgroundColor="#8490B3">
+              <Paper elevation={3}>
                 <Box width={500} height={500} margin={8} textAlign="center" p={3}>
                   <h3>{`${question.questionText}`}</h3>
                   {question.options.map((option) => (
