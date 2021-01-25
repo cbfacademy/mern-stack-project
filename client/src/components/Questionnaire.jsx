@@ -10,7 +10,7 @@ function Questionnaire() {
     if (!questions) {
       getquestions();
     }
-  });
+  }, []);
 
   const getquestions = async () => {
     let res = await questionService.getAll();
@@ -20,8 +20,9 @@ function Questionnaire() {
 
   function getCurrentQuestion(target) {
     if (questions) {
-      console.log(target)
+     // console.log(questions)
       let question = questions.filter((question) => question.id === target);
+      console.log(question)
       return question.length > 0 ? question[0] : null;
     }
     return null;

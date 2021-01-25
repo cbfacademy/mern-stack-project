@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { render } from "react-dom";
-import Footer from "./Footer";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
+import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import "./Question.css";
 
 
@@ -69,7 +68,7 @@ function Question(props) {
                   <h3>{`${question.questionText}`}</h3>
                   {question.options.map((option) => (
                     <Button
-                     // className={{ containedPrimary: classes.primary}}
+                     startIcon={<ArrowRightIcon />}
                       size="small"
                       style={{
                         fontFamily: "Rubik",
@@ -100,10 +99,13 @@ function Question(props) {
     <div>
       <ul>{renderQuestion(question)}</ul>
       <ul>
-        {showAnswer[0] ? (
-          question.id === showAnswer[1] && renderStatement(question)
+       {showAnswer[0] ? (
+         // Have an if statement to check if target == docuements
+         //If it is, then renderQuestions
+         // if not, then renderStatement
+         renderStatement(props.parentCallback(showAnswer[1]))
         ) : (
-          <p></p>
+          <p>No data</p>
         )}
       </ul>
 
