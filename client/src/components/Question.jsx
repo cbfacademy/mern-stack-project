@@ -91,12 +91,11 @@ function Question(props) {
                         fontSize: 16,
                         borderRadius: 2,
                         width: "70%",
-                        margin: 10,
+                        margin: 7,
                         justifyContent: "left",
                       }}
                       onClick={() => handleClick(option.Target)}
                       variant="outlined"
-                      fontFamily="Rubik"
                       color="primary"
                     >
                       {option.Text}
