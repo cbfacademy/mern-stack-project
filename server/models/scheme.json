@@ -3,12 +3,17 @@
     "id": 1,
     "questionText": "I need help with",
     "type": "multiplechoice",
-    "options": [{ "Text": "Documents", "Target": 2 }]
+    "options": [
+      { "Text": "American Express", "Target": 14 },
+      { "Text": "Approbation", "Target": 15 },
+      { "Text": "Documents", "Target": 2 },
+      { "Text": "Registry of Germany", "Target": 16 }
+    ]
   },
 
   {
     "id": 2,
-    "questionText": "Which entity do you need help with",
+    "questionText": "Please choose an entity",
     "type": "multiplechoice",
     "options": [
       { "Text": "AG  bösennotiert", "Target": 9 },
@@ -171,6 +176,42 @@
       "5. Legitimation",
 
       "Eingetragene Genossenschaft is a juristische Person."
+    ]
+  },
+  {
+    "id": 14,
+    "questionText": "The following documents need to be attached",
+    "type": "statement",
+    "Text": [
+      "1. Signed AmEx application",
+      "2. Application",
+      "3. ID of signatory",
+      "4. GWA or Handelsregister",
+
+      "Send an email to Amex.Neukundenservice@aep.com",
+      "Subject: Name of Company _our Ticket number",
+      "Body: Include TID12345678."
+    ]
+  },
+  {
+    "id": 15,
+    "questionText": "The following applies to Doctors (People or Animals):",
+    "type": "statement",
+    "Text": [
+      "1. They do not require a GWA or Handelsregister.",
+      "2. Approbation or a special Doctor ID can be used instead.",
+      "3. Pharmasists can provide either a Handelsregister, GWA OR Approbation"
+    ]
+  },
+  {
+    "id": 16,
+    "questionText": "This is how to send a receipt to the Telecash system",
+    "type": "statement",
+    "Text": [
+      "1. Go to https//www.transparenzregister.de/treg/de/meinedaten/abrufe?6",
+      "2. Download the receipts",
+      "3. Attach receipts to a new E-mail",
+      "4. Send the attachments to rechnungspruefung-fdd@firstdata.de"
     ]
   }
 ]

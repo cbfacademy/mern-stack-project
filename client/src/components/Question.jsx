@@ -7,6 +7,7 @@ import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
 import "./Question.css";
 
+
 function Question(props) {
   const [showAnswer, setShowAnswer] = useState([false, 1]);
   //const [question, setquestion] = useState(null);
@@ -83,7 +84,7 @@ function Question(props) {
                   <h3>{`${question.questionText}`}</h3>
                   {question.options.map((option) => (
                     <Button
-                      className="btn"
+                     // className={{ containedPrimary: classes.primary}}
                       size="small"
                       style={{
                         fontSize: 16,

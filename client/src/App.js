@@ -13,7 +13,25 @@ const theme = createMuiTheme({
       main: "#8490B3",
     },
   },
+  MuiButton: {
+    "&:hover": {
+      color: "#3A4C84",
+    },
+  }
 });
+
+theme.overrides = {
+  MuiButton: {
+    root: {
+      borderRadius: 0,
+    },
+    containedPrimary: {
+      "&:hover": {
+        color: "#3A4C84",
+      },
+    },
+  },
+};
 
 function App() {
   return (
