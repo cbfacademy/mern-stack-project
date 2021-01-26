@@ -22,7 +22,7 @@ function Questionnaire() {
     if (questions) {
      // console.log(questions)
       let question = questions.filter((question) => question.id === target);
-      console.log(question)
+      
       return question.length > 0 ? question[0] : null;
     }
     return null;
