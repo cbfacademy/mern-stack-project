@@ -6,56 +6,74 @@ import Box from "@material-ui/core/Box";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import "./Question.css";
 
-
 function Question(props) {
-  const [showAnswer, setShowAnswer] = useState([false, 1]);
-  //const [question, setquestion] = useState(null);
-  let question = props.parentCallback(1);
- // if (!question){
-  //setquestion.propsparentCallback}
-  
+  const [id, setId] = useState(1);
 
-  function handleClick(target) {
-    props.parentCallback(target);
-    setShowAnswer([true, target]);
-  }
+  /**
+   * Click handler that renders the next question or statement based on the target id
+   * associated with the clicked button
+   * @param {int} target 
+   */
+  const handleClick = (target) => {
+    setId(target);
 
+    return renderElement(target);
+  };
+
+  /**
+   * Renders a question or statement depending on the type property
+   * @param {int} id 
+   */
+  const renderElement = (id) => {
+    let question = props.parentCallback(id);
+
+    if (null !== question) {
+      // Test what sort of item this is and call the appropriate method
+      return "statement" === question.type
+        ? renderStatement(question)
+        : renderQuestion(question);
+    }
+  };
+
+  /**
+   * Renders a statement
+   * @param {object} statement 
+   */
   const renderStatement = (statement) => {
     return (
-      <div>
         <Grid
           container
           direction="column"
           justify="center"
           alignItems="center"
-          spacing={2}
         >
           <Grid item>
-            <Paper>
-              <Box width={600} height={300} textAlign="center" p={5}>
+            <Paper elevation={3}>
+            <Box
+                  width={500}
+                  height={500}
+                  margin={8}
+                  textAlign="center"
+                  p={3}
+                >
                 <h3>{statement.questionText}</h3>
                 {statement.Text.map((answer) => (
-                  <p>{answer}</p>
+                  <p key={answer.id}>{answer}</p>
                 ))}
               </Box>
             </Paper>
           </Grid>
         </Grid>
-        <Grid
-          container
-          direction="row"
-          justify="space-between"
-          alignItems="center"
-          spacing={2}>
-        </Grid>
-      </div>
     );
   };
 
+  /**
+   * Renders a question
+   * @param {object} question 
+   */
   const renderQuestion = (question) => {
     if (question && question.type !== "statement") {
       return (
-        <text key={question.id}>
           <Grid
             container
             direction="column"
@@ -64,11 +82,18 @@ function Question(props) {
           >
             <Grid item>
               <Paper elevation={3}>
-                <Box width={500} height={500} margin={8} textAlign="center" p={3}>
+                <Box
+                  width={500}
+                  height={500}
+                  margin={8}
+                  textAlign="center"
+                  p={3}
+                >
                   <h3>{`${question.questionText}`}</h3>
                   {question.options.map((option) => (
                     <Button
-                     startIcon={<ArrowRightIcon />}
+                    key={option.Target}
+                      startIcon={<ArrowRightIcon />}
                       size="small"
                       style={{
                         fontFamily: "Rubik",
@@ -89,29 +114,13 @@ function Question(props) {
               </Paper>
             </Grid>
           </Grid>
-        </text>
       );
     }
   };
-  
 
   return (
     <div>
-      <ul>{renderQuestion(question)}</ul>
-      <ul>
-       {showAnswer[0] ? (
-         // Have an if statement to check if target == docuements
-         //If it is, then renderQuestions
-         // if not, then renderStatement
-         renderStatement(props.parentCallback(showAnswer[1]))
-        ) : (
-          <p>No data</p>
-        )}
-      </ul>
-
-      <div className="Question">
-        <questionService />
-      </div>
+      {renderElement(id)}
     </div>
   );
 }
