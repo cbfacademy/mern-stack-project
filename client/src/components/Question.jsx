@@ -9,22 +9,36 @@ import "./Question.css";
 function Question(props) {
   const [id, setId] = useState(1);
 
+  /**
+   * Click handler that renders the next question or statement based on the target id
+   * associated with the clicked button
+   * @param {int} target 
+   */
   const handleClick = (target) => {
     setId(target);
 
     return renderElement(target);
   };
 
+  /**
+   * Renders a question or statement depending on the type property
+   * @param {int} id 
+   */
   const renderElement = (id) => {
     let question = props.parentCallback(id);
 
     if (null !== question) {
+      // Test what sort of item this is and call the appropriate method
       return "statement" === question.type
         ? renderStatement(question)
         : renderQuestion(question);
     }
   };
 
+  /**
+   * Renders a statement
+   * @param {object} statement 
+   */
   const renderStatement = (statement) => {
     return (
         <Grid
@@ -53,6 +67,10 @@ function Question(props) {
     );
   };
 
+  /**
+   * Renders a question
+   * @param {object} question 
+   */
   const renderQuestion = (question) => {
     if (question && question.type !== "statement") {
       return (
