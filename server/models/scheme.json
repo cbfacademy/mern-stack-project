@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "questionText": "I need help with",
+    "questionText": "I NEED HELP WITH",
     "type": "multiplechoice",
     "options": [
       { "Text": "American Express", "Target": 14 },
@@ -14,7 +14,7 @@
 
   {
     "id": 2,
-    "questionText": "Please choose an entity",
+    "questionText": "PLEASE CHOOSE AN ENTITY",
     "type": "multiplechoice",
     "options": [
       { "Text": "AG  bösennotiert", "Target": 9 },
@@ -27,7 +27,7 @@
       { "Text": "GmbH or UG", "Target": 5 },
       { "Text": "GmbH & Co KG", "Target": 8 },
       { "Text": "KG or OHG", "Target": 7 },
-      { "Text": "Körperschaft des öffentlichen Rechts ", "Target": 11 }
+      { "Text": "Körperschaft", "Target": 11 }
     ]
   },
 
@@ -181,7 +181,7 @@
   },
   {
     "id": 14,
-    "questionText": "The following documents need to be attached",
+    "questionText": "Please attach the following:",
     "type": "statement",
     "Text": [
       "1. Signed AmEx application",

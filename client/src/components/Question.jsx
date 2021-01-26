@@ -53,7 +53,7 @@ function Question(props) {
                   width={500}
                   height={500}
                   margin={8}
-                  textAlign="center"
+                  textAlign="left"
                   p={3}
                 >
                 <h3>{statement.questionText}</h3>
@@ -83,11 +83,11 @@ function Question(props) {
             <Grid item>
               <Paper elevation={3}>
                 <Box
-                  width={500}
-                  height={500}
-                  margin={8}
+                  width={600}
+                  height={720}
+                  margin={6}
                   textAlign="center"
-                  p={3}
+                  p={1}
                 >
                   <h3>{`${question.questionText}`}</h3>
                   {question.options.map((option) => (
@@ -96,12 +96,13 @@ function Question(props) {
                       startIcon={<ArrowRightIcon />}
                       size="small"
                       style={{
-                        fontFamily: "Rubik",
-                        fontSize: 16,
+                        fontFamily: "Roboto",
+                        fontSize: 18,
                         borderRadius: 2,
                         width: "70%",
                         margin: 7,
                         justifyContent: "left",
+                        fontWeight: 600,
                       }}
                       onClick={() => handleClick(option.Target)}
                       variant="outlined"
@@ -126,3 +127,5 @@ function Question(props) {
 }
 
 export default Question;
+
+
