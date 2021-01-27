@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import clientService from "../../services/clientService";
 import "../../stylesheets/Form.css";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 //Declaring a react component
 
@@ -17,17 +17,21 @@ async function loginUser(credentials) {
   }).then((data) => data.json());
 }
 //Add setCurrentUsername as a property in Login form
-function LoginForm({ setToken }) {
-  const [clientUsername, setClientUsername] = useState();
-  const [clientPassword, setClientPassword] = useState();
+function LoginForm({ setClient, setToken }) {
+  const [clientUsername, setClientUsername] = useState("");
+  const [clientPassword, setClientPassword] = useState("");
+  const history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = await loginUser({
+    const loginData = await loginUser({
       clientUsername,
       clientPassword,
     });
-    setToken(token);
+    setToken(loginData.token);
+    setClient(loginData.client);
+    console.log(loginData);
+    history.push("/dashboard");
     // setCurrentUsername({ currentUsername: clientUsername });
 
     // clientService.loginUser(credientials);
@@ -69,6 +73,7 @@ function LoginForm({ setToken }) {
 }
 LoginForm.propTypes = {
   setToken: PropTypes.func.isRequired,
+  setClient: PropTypes.func.isRequired,
   // setCurrentUsername: PropTypes.func.isRequired,
 };
 

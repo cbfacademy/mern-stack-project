@@ -44,6 +44,7 @@ class Navbar extends React.Component {
   };
 
   render() {
+  
     const navbarItems = MenuItems.filter((item) => {
       if (!this.props.token && item.label === "Dashboard") {
         return false;

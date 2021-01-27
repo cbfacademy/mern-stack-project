@@ -16,14 +16,15 @@ import Opportunities from "./components/Opportunities";
 import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
 import ProjectProfile from "./pages/ProjectProfile";
-// import useToken from "./components/useToken"; //TEST
+import useToken from "./components/useToken"; //TEST
 // import useCurrentUsername from "./components/useCurrentUsername";
 
 function App() {
   const [projects, setprojects] = useState(null);
   const [searchedProjects, setsearchedProjects] = useState([]);
-  // const { token, setToken } = useToken(); //TEST
-  const [token, setToken] = useState();
+  const { token, setToken } = useToken(); //TEST
+  const [client, setClient] = useState({});
+  // const [token, setToken] = useState();
   // const [currentUsername, setCurrentUsername] = useCurrentUsername();
 
   useEffect(() => {
@@ -178,6 +179,7 @@ function App() {
                 <Navbar token={token} />
                 <LoginForm
                   setToken={setToken}
+                  setClient={setClient}
                   // setCurrentUsername={setCurrentUsername}
                 />
               </React.Fragment>

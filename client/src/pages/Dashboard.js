@@ -1,12 +1,13 @@
-import React from "react"; //TEST
+import React, { useState } from "react"; //TEST
 // import React, { useState } from "react";
 import "../stylesheets/Dashboard.css";
 import { Link } from "react-router-dom";
+// import LoginForm from "../components/Forms/LoginForm";
 
 // import LoginForm from "../components/Forms/LoginForm";
 
 export default function Dashboard() {
-  // const [token, setToken] = useState();
+  const [token, setToken] = useState();
   // // // THIS MAKES THE LOGIN PAGE THE FIRST THING ON THE WEBSIT
   // if (!token) {
   //   return <LoginForm setToken={setToken} />;
