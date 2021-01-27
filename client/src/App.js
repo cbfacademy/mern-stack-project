@@ -67,12 +67,12 @@ function App() {
     <>
       <div className="content-wrap">
         <Router>
+          <Navbar token={token} /> {/* Moving Navbar here means you only need in once in your app */}
           <Route
             exact
             path="/"
             render={() => (
               <React.Fragment>
-                <Navbar token={token} />
                 <p className="tagline">
                   Find <span className="tagline-span-1">opportunities</span> and
                   build up your <span className="tagline-span-2">CV</span>
@@ -95,7 +95,6 @@ function App() {
             path="/opportunities"
             render={() => (
               <React.Fragment>
-                <Navbar token={token} />
                 <Opportunities />
 
                 {/* <div>
@@ -125,7 +124,6 @@ function App() {
             path="/projectprofile"
             render={() => (
               <React.Fragment>
-                <Navbar token={token} />
                 <ProjectProfile />
               </React.Fragment>
             )}
@@ -135,7 +133,6 @@ function App() {
             path="/about"
             render={() => (
               <React.Fragment>
-                <Navbar token={token} />
                 <About />
               </React.Fragment>
             )}
@@ -145,7 +142,6 @@ function App() {
             path="/dashboard"
             render={() => (
               <React.Fragment>
-                <Navbar token={token} />
                 <Dashboard />
                 {/* <Dashboard currentUsername={currentUsername} /> */}
               </React.Fragment>
@@ -156,7 +152,6 @@ function App() {
             path="/clientprojects"
             render={() => (
               <React.Fragment>
-                <Navbar token={token} />
                 <ClientProjects />
               </React.Fragment>
             )}
@@ -166,7 +161,6 @@ function App() {
             path="/projectform"
             render={() => (
               <React.Fragment>
-                <Navbar token={token} />
                 <ProjectForm />
               </React.Fragment>
             )}
@@ -176,7 +170,6 @@ function App() {
             path="/login"
             render={() => (
               <React.Fragment>
-                <Navbar token={token} />
                 <LoginForm
                   setToken={setToken}
                   setClient={setClient}
@@ -190,7 +183,6 @@ function App() {
             path="/signup"
             render={() => (
               <React.Fragment>
-                <Navbar token={token} />
                 <SignUpForm />
               </React.Fragment>
             )}
