@@ -13,9 +13,9 @@ module.exports = (app) => {
 
     const clients = await Client.find({ username, password }); // calling function to get the data
     if (clients.length === 1) {
-      return res.status(200).send({ token: "1234" });
+      return res.status(200).send({ token: "1234", client: clients[0] });
     } else {
-      return res.status(400).send({ failure: "failure" });
+      return res.status(401).send({ status: "failure" });
     }
   });
 };
