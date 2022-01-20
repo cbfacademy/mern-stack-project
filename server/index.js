@@ -1,28 +1,28 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+require("dotenv").config();
 
-// IMPORT YOUR MODELS
-require('./models/Users');
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+
+// IMPORT YOUR SCHEMAS HERE
+require("./models/Profiles"); //This is just an example. Don't forget to delete this
 
 const app = express();
 
+// This is where your API is making its initial connection to the database
 mongoose.Promise = global.Promise;
-mongoose.connect(
-  process.env.MONGODB_URI ||
-    `mongodb://localhost:27017/black-codher-personal-project`,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
+  useNewUrlParser: true,
+});
 
 app.use(bodyParser.json());
 
-// IMPORT YOUR ROUTES
-require('./routes/usersRoutes')(app);
+// IMPORT YOUR API ROUTES HERE
+// Below is just an example. Don't forget to delete it. 
+// It's importing and using everything from the profilesRoutes.js file and also passing app as a parameter for profileRoutes to use
+require("./routes/profilesRoutes")(app); 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
-  console.log(`app running on port ${PORT}`);
+  console.log(`API running on port ${PORT}`);
 });
