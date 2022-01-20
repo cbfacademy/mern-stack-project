@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-// SERVICES
-import userService from './services/userService';
+// SERVICES THAT CALL OUR API ENDPOINTS
+import { getAllProfiles } from "./services/profileService";
 
 function App() {
-  const [users, setusers] = useState(null);
+  const [profiles, setProfiles] = useState(null);
 
   useEffect(() => {
-    if (!users) {
-      getusers();
+    async function getProfiles() {
+      if (!profiles) {
+        const response = await getAllProfiles();
+        setProfiles(response);
+      }
     }
-  });
 
-  const getusers = async () => {
-    let res = await userService.getAll();
-    setusers(res);
-  };
+    getProfiles();
+  }, [profiles]);
 
-  const renderUser = (user) => {
+  const renderProfile = (user) => {
     return (
       <li key={user._id}>
         <h3>
@@ -32,10 +32,10 @@ function App() {
   return (
     <div>
       <ul>
-        {users && users.length > 0 ? (
-          users.map((user) => renderUser(user))
+        {profiles && profiles.length > 0 ? (
+          profiles.map((profile) => renderProfile(profile))
         ) : (
-          <p>No users found</p>
+          <p>No profiles found</p>
         )}
       </ul>
     </div>

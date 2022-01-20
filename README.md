@@ -1,109 +1,105 @@
 # Black Codher Personal Project
 
-Here's a boilerplate project directory with the initial setup for your Personal Project.
+🎉 **Welcome to your Black Codher Personal Project** 🎉
 
-The expectation with this project is that you're able to fork the repository, and get started.
+Here's some boilerplate code with the initial setup for your project.
 
-- [Black Codher Personal Project](#black-codher-personal-project)
-  - [Project Structure](#project-structure)
-    - [client](#client)
-    - [server](#server)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-      - [Mongo added to system path (Windows only)](#mongo-added-to-system-path-windows-only)
-      - [MongoDB Database Tools installed](#mongodb-database-tools-installed)
-    - [Fork Project](#fork-project)
-    - [Clone Repo](#clone-repo)
-    - [Populate The Database](#populate-the-database)
-    - [Start The Development Server](#start-the-development-server)
-    - [Example Application](#example-application)
-  - [What's Next?!](#whats-next)
+The expectation with this code is that you're able to clone the repository and get started building your own fullstack (MERN) application.
+
+- [Project Structure](#project-structure)
+  - [Client](#client)
+  - [Server](#server)
+- [Getting Started](#getting-started)
+  - [Populating The Database](#populating-the-database)
+  - [Starting The Development Server](#starting-the-development-server)
+  - [Example Application](#example-application)
+- [What's Next?!](#whats-next)
 
 ## Project Structure
 
-This is the structure of the repository is:
+The initial structure of the repository is:
 
+```plain
 - README.md
-- client
-- server
+- client/
+  - public/
+  - src/
+    - services/
+    - index.js
+    - App.js
+  - README.md
+- server/
+  - data/
+  - models/
+  - routes/
+  - index.js
+  - README.md
+```
 
-### client
+### Client
 
-The client folder is where you will store your front-end code. Currently this contains a new project created with `create-react-app` and an example of how to call an API that's in active development.
+The client folder is where you will store your front end code. Currently this contains a new project created with `create-react-app` and an example of how to call an API that's in active development.
 
-Put your React code here
+✋🏾 **Put your React code here** ✋🏾
 
-### server
+Read the `client/` [README](./client/README.md) for more details of the example front end app provided
 
-The server folder is where you will store your back-end code. There is currently a JSON file with some fake data, it is an example of how your data can be structured. This folder is where you'll add your Node.js code.
+### Server
 
-Put your Node code here
+The server folder is where you will store your backend code. You'll be building your API and making queries to your database here.
+
+✋🏾 **Put your Node code here**✋🏾
+
+Read the `server/` [README](./server/README.md) for more details of the example API provided
 
 ## Getting Started
 
-### Prerequisites
+### Environment variables
 
-#### Mongo added to system path (Windows only)
+We have provided you with an example environment variables file called [`.env.example`](./.env.example). Rename this file to `.env` to use it.
 
-1. Type `mongo --help` to check MongoDB is on the system path. If you see the help text displayed, skip to the next prerequisite.
-2. Navigate to your MongoDB installation folder and copy the full path to the bin folder (default should be `C:\Program Files\MongoDB\Server\4.4\bin`)
-3. Add the MongoDB bin folder to the system path
-   1. Type 'environment' in the Windows Search box and open "Edit the system environment variables" (or right-click "This PC" > Properties > Advanced System Properties)
-   2. Click "Environment Variables..."
-   3. Select "Path" under "System variables" and click "Edit"
-   4. Click "New"
-   5. Paste the path you copied above, or click "Browse..." to locate the folder on your system
-   6. Click "OK"
-   7. Click "OK"
-   8. Click "OK"
-4. Ensure MongoDB service is running
-   1. Type 'Services' in the Windows Search box and open "Services".
-   2. Scroll down the list and ensure "MongoDB" is running. Click to select the service and click the "play" icon to start if not.
-#### MongoDB Database Tools installed
+In here you should assign your database connection string to the `DATABASE_CONNECTION_STRING` variable.
 
-1. Check `mongoimport` is installed by running `mongoimport --help` in your command prompt. If you see the help text displayed, continue to the next prerequisite. If you see a `command not recognized` error message, continue to next step.
-2. Follow the installation instructions for [macOS](https://docs.mongodb.com/database-tools/installation/installation-macos/#installation) or [Windows](https://docs.mongodb.com/database-tools/installation/installation-windows/#installation)
+Make sure your connection string has the correct database name you are trying to connect to and follows this format:
 
-### Fork Project
+```plain
+mongodb+srv://<username>:<password>@cluster0.7k5er.mongodb.net/<database_name>
+```
 
-1. Click on `Fork`
-2. Select your Username
+For the example app the database name is `example_db`.
 
-You can also refer to the [GitHub Fork Tutorial](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+You'll also see the `PORT` for your API in this file. Do not change this `PORT` number.
 
-This will add the `black-codher-personal-project` to your GitHub account.
+🛑 **YOUR ENVIRONMENT VARIABLES SHOULD NEVER BE COMMITED AND THE `.env` FILE HAS ALREADY BEEN ADDED TO THE [`.gitignore`](./.gitignore).** 🛑
 
-### Clone Repo
+### Populating The Database
 
-1. Go to your forked repo
-2. Click Code
-3. Click HTTPS
-4. Copy the text starting with `https://github.com/<your-repo-name>/black-codher-personal-project` (replace <your-repo-name> with the name of your GitHub username)
-5. On your command line / terminal type `git clone https://github.com/<your-repo-name>/black-codher-personal-project` (replace <your-repo-name> with the name of your GitHub username)
+If you choose to populate your database with some initial data you can do so using seed data. We have provided an example of seed data in the [`data.example/`](./server/data.example) folder in a file called [`profiles.mongodb`](server/data.example/profiles.mongodb).
 
-### Populate The Database
+All you need to do is rename the `data.example` folder to `data` and then create a `.mongodb` file that will create and insert data into your database and the correct collection(s).
 
-You need to create and populate an initial collection in your local MongoDB server:
+To get the example app up and running you need to create an `example_db` database, a `profiles` collection and inserting some profile data. This can all be done by running the [`profiles.mongodb`](server/data.example/profiles.mongodb) file in your MongoDB playground.
 
-1. Type `cd black-codher-personal-project` to navigate to your project root directory
-2. Type `mongo` to open a MongoDB shell
-3. Type `use black-codher-personal-project` to create your database
-4. Type `exit` to close the shell
-5. Type `mongoimport -h 127.0.0.1:27017 -d black-codher-personal-project -c users --file ./server/models/data.json --jsonArray` _Make sure this command is run from your project's root directory!_
+If successful you should see 4 documents in your newly created `profiles` collection, in your new `example_db` database.
 
-### Start The Development Server
+🛑 **YOU SHOULD NOT COMMIT YOUR INITIAL DATA. THE `data/`FOLDER HAS ALREADY BEEN ADDED TO THE [`.gitignore`](./.gitignore).** 🛑
 
-You can start the client side code (front-end), server side (back-end) and database separately using the commands in their respective folders. If you prefer to start all three together (this is the most convienient way), you can do so with the following commands:
+### Starting The Development Server
 
-1. `npm install && cd client && npm install && cd ..`
-2. `npm run develop`
+You can start the client side code (front-end) and server side (back-end) separately using the commands in their respective folders. If you prefer to start them all together (this is the most convienient way), you can do so with the following commands:
 
-Please note that you run `npm install && cd client && npm install && cd ..` during your first installation, subsequently you will only need to run `npm run develop` to get your development environment up and running
+1. `npm run dev-install` to install all the dependencies
+2. `npm run develop` to start the development servers - [localhost:3000](http://localhost:3000) for front end and [localhost:8080](http://localhost:8080)
+
+Please note that you will only need to run `npm run dev-install` once during your first installation, subsequently you will only need to run `npm run develop` to get your development environment up and running.
+
+When making file changes to either your front or back end code your app will automatically restart and reload for you.
+
 ### Example Application
 
-We have created an example application that will display a list of users that are stored in your local database.
+We have created an example application that will display a list of profiles that are stored in the `example_db` database.
 
-If all's well with the above steps, you should see a list of names. If your browser shows a "No users found" message, re-check all the steps to ensure your database is populated and connected properly.
+If all's well with the above steps, you should see a list of familiar names. If your browser shows "No profiles found", re-check all the steps to ensure your database is populated and everything is connected properly.
 
 ## What's Next?!
 

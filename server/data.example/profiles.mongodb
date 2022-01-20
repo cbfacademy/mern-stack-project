@@ -1,0 +1,31 @@
+// Below is some initial sample data to get you started.
+
+use("example_db"); // This is our example database. Make sure you don't call your database "example_db".
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+db.profiles.drop();
+
+// Insert a few documents into the profiles collection.
+db.profiles.insertMany([  
+    {
+        "first_name": "Efua",
+        "last_name": "Akumanyi",
+        "location": "London"
+    },
+    {
+        "first_name": "Gary",
+        "last_name": "McPherson",
+        "location": "London"
+    },
+    {
+        "first_name": "Tanya",
+        "last_name": "Powell",
+        "location": "London"
+    },
+    {
+        "first_name": "Michael",
+        "last_name": "Hael",
+        "location": "Port Harcourt city"
+    }
+]);
