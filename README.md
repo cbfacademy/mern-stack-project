@@ -1,10 +1,8 @@
-# Black Codher Personal Project
-
-🎉 **Welcome to your Black Codher Personal Project** 🎉
+# MERN Stack Project
 
 Here's some boilerplate code with the initial setup for your project.
 
-The expectation with this code is that you're able to clone the repository and get started building your own fullstack (MERN) application.
+The expectation with this code is that you're able to clone the repository and get started building your own fullstack ([MERN](https://www.mongodb.com/mern-stack)) application.
 
 - [Project Structure](#project-structure)
   - [Client](#client)
