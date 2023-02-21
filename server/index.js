@@ -11,6 +11,7 @@ const app = express();
 
 // This is where your API is making its initial connection to the database
 mongoose.Promise = global.Promise;
+mongoose.set("strictQuery", false);
 mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
   useNewUrlParser: true,
 });
