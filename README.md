@@ -56,21 +56,27 @@ Read the `server/` [README](./server/README.md) for more details of the example 
 
 We have provided you with an example environment variables file called [`.env.example`](./.env.example). Rename this file to `.env` to use it.
 
-In here you should assign your database connection string to the `DATABASE_CONNECTION_STRING` variable.
+In here, you should copy your database connection string (which you can get from the MongoDB Atlas site or the MongoDB extension in VS Code) to the `DATABASE_CONNECTION_STRING` variable.
 
-Make sure your connection string has the correct database name you are trying to connect to and follows this format:
+Make sure your connection string follows this format:
 
 ```plain
-mongodb+srv://<username>:<password>@cluster0.7k5er.mongodb.net/<database_name>
+mongodb+srv://<username>:<password>@<cluster id>.mongodb.net
 ```
 
-For the example app the database name is `example_db`.
+If your connection string has a database name appended as below, remove it:
+
+```plain
+mongodb+srv://<username>:<password>@<cluster id>.mongodb.net/<database name>
+```
+
+For the example app, the database name is `example_db`.
 
 You'll also see the `PORT` for your API in this file. Do not change this `PORT` number.
 
 🛑 **YOUR ENVIRONMENT VARIABLES SHOULD NEVER BE COMMITED AND THE `.env` FILE HAS ALREADY BEEN ADDED TO THE [`.gitignore`](./.gitignore).** 🛑
 
-### Populating The Database
+### Populating The Example Database
 
 If you choose to populate your database with some initial data you can do so using seed data. We have provided an example of seed data in the [`data.example/`](./server/data.example) folder in a file called [`profiles.mongodb`](server/data.example/profiles.mongodb).
 
@@ -102,3 +108,7 @@ If all's well with the above steps, you should see a list of familiar names. If 
 ## What's Next?!
 
 Now it's time to start building your project.
+
+1. Choose a new database name and update the `MONGO_DB_NAME` value in your `.env` file
+2. Create a new `.mongodb` file to populate the database with your data and be sure to update the `use("<database name>")` statement with the name you chose above.
+3. Define your new API routes and add to server/index.js
