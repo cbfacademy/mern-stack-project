@@ -12,9 +12,9 @@ const profilesRoutes = (app, db) => {
   const profilesCollection = () => db.collection("profiles");
 
   /**
-   * Middleware handler for GET requests to /api/profile path
+   * Middleware handler for GET requests to /api/profiles path
    */
-  app.get(`/api/profile`, async (req, res) => {
+  app.get(`/api/profiles`, async (req, res) => {
     try {
       // Waits for asynchronous `find()` operation to complete and converts results to array
       const profiles = await profilesCollection().find({}).toArray();
@@ -28,9 +28,9 @@ const profilesRoutes = (app, db) => {
   });
 
   /**
-   * Middleware handler for POST requests to /api/profile path
+   * Middleware handler for POST requests to /api/profiles path
    */
-  app.post(`/api/profile`, async (req, res) => {
+  app.post(`/api/profiles`, async (req, res) => {
     try {
       const profile = await profilesCollection().insertOne(req.body);
 
@@ -46,9 +46,9 @@ const profilesRoutes = (app, db) => {
   });
 
   /**
-   * Middleware handler for PUT requests to /api/profile/:id path
+   * Middleware handler for PUT requests to /api/profiles/:id path
    */
-  app.put(`/api/profile/:id`, async (req, res) => {
+  app.put(`/api/profiles/:id`, async (req, res) => {
     try {
       // Captures target id from URL
       const { id } = req.params;
@@ -68,9 +68,9 @@ const profilesRoutes = (app, db) => {
   });
 
   /**
-   * Middleware handler for DELETE requests to /api/profile/:id path
+   * Middleware handler for DELETE requests to /api/profiles/:id path
    */
-  app.delete(`/api/profile/:id`, async (req, res) => {
+  app.delete(`/api/profiles/:id`, async (req, res) => {
     try {
       const { id } = req.params;
       const query = { _id: new ObjectId(id) };
