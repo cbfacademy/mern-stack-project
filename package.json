@@ -9,7 +9,7 @@
     "server": "nodemon server/index.js",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "node server/index.js",
-    "dev-install": "npm install && cd client && npm install && cd .."
+    "dev-install": "rm -rf ./node_modules && npm install && cd client && rm -rf ./node_modules && npm install && cd .."
   },
   "keywords": [],
   "author": "",
